@@ -114,17 +114,477 @@
     height: 100%;
     transition: all 0.2s;
     position: relative;
+  }
 
+  //Стили и цвета для карты по областям
+  .severo__zapadniy-okrug {
     path {
       transition: all 0.3s;
-      cursor: pointer;
+    }
 
-      &:hover {
-        fill: rgb(28, 157, 0);
-        box-shadow: 0 0 5px #212121;
+    &:hover {
+      path {
+        fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
       }
     }
   }
+  
+
+  .sybirskiy__federalniy-okrug {
+    path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      path {
+        fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .yakutiya {
+    path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .dalniy__vostok {
+    path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .kurganskaya__oblast {
+    path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .hunti__yalamo {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .ekaterenburg {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .krasnoyarsk {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .OMSK {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .chehov {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .tver {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .volgograd {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .cheboksari {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .ivanovo {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .ug {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .bryansk {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .belgorod {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .novosibirskaya__oblast {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .saratov {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .voronezh {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .ufa {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .perm {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .samara {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .kazan {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .rostov {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .tumen {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .krasnodar {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+        fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .nizhegorodskaya {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+        fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .nizhniy__novgorod {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .belorus {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+         fill: #02be9f;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.20);
+      }
+    }
+  }
+
+  .belorus {
+    path {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      path {
+        fill: #70c0cc;
+        border-width: 3px;
+        stroke-width: 2px;
+        stroke: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+
+
 
   .popups__container {
     position: absolute;
@@ -372,8 +832,9 @@
   }
 
   &__baloon-33 {
-    left: 8.8%;
+    left: 8.5%;
     top: 49%;
+    height: 18px !important;
   }
 
   &__baloon-1,
@@ -414,9 +875,9 @@
     width: 20px;
     transition: all 0.3s;
 
-    &:hover {
-      transform: scale(1.5);
-    }
+    // &:hover {
+    //   transform: scale(1.5);
+    // }
 
     img {
       cursor: pointer;

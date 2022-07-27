@@ -3,7 +3,18 @@
   <div class="wrapper">
     <div class="header__container">
       <nav class="header__nav">
-        <a href="index.html" class="header__logo"><img src="../assets/images/logo.svg" alt="vezalogo"></a>
+        <div class="header__logo-box">
+          <a href="index.html" class="header__logo">
+            <img src="../assets/images/logo.svg" alt="vezalogo">
+          </a>
+          <a href="#popup__city" class="header__location popup-open popup-links">
+            <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 42.5L24.2 41.6C23.7 41.1 12 27.3 12 19C12 11.8 17.8 6 25 6C32.2 6 38 11.8 38 19C38 27.3 26.3 41.1 25.8 41.7L25 42.5ZM25 8C18.9 8 14 12.9 14 19C14 25.4 22.4 36.2 25 39.4C27.6 36.2 36 25.4 36 19C36 12.9 31.1 8 25 8Z" fill="black"/>
+              <path d="M25 24C22.2 24 20 21.8 20 19C20 16.2 22.2 14 25 14C27.8 14 30 16.2 30 19C30 21.8 27.8 24 25 24ZM25 16C23.3 16 22 17.3 22 19C22 20.7 23.3 22 25 22C26.7 22 28 20.7 28 19C28 17.3 26.7 16 25 16Z" fill="black"/>
+            </svg>
+            <span class="header__location-title">Веза-Москва</span>
+          </a>
+        </div>
         <ul class="header__menu">
           <li class="header__menu-list"><a href="decision.html" class="header__menu-link">Решение</a></li>
           <li class="header__menu-list"><a href="production-page.html" class="header__menu-link">Продукция</a></li>
@@ -55,6 +66,7 @@
     </div>
   </div>
 
+  <!-- Поиск -->
   <div class="popup seach__popup" id="popup__search">
     <div class="popup__body popup__search-body">
       <div class="close-popup search__close-popup">&times;</div>
@@ -62,6 +74,172 @@
         <div class="popup__search-logo"><img src="../assets/images/logo.svg" alt="veza"></div>
         <div class="popup__input">
           <input placeholder="Поиск" class="input">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Окно городов -->
+  <div class="header__popup-container popup" id="popup__city">
+    <div class="header__popup-body popup__body">
+      <div class="header__close-popup close-popup">&times;</div>
+      <div class="wrapper">
+        <div class="header__popup-content popup__content">
+          <h1 class="header__popup__title-h1">Ваш ближайший офис: <span>Москва</span></h1>
+          <input placeholder="Найти свой город" class="input header__popup-input">
+          <div class="header__popup__city-container">
+            <div class="header__popup__city-items">
+              <ul class="header__popup-countries">
+                <span class="header__country-title">Выберите страну:</span>
+                <li class="header__popup-country">Российская Федерация</li>
+                <li class="header__popup-country">Республика Беларусь</li>
+                <li class="header__popup-country">Республика Казахстан</li>
+                <li class="header__popup-country">Республика Узбекистан</li>
+              </ul>
+              <span class="header__city-title">Выберите регион:</span>
+              <ul class="header__popup-region">
+                <li class="header__popup-city">Адыгея Республика</li>
+                <li class="header__popup-city">Алтай Республика</li>
+                <li class="header__popup-city">Алтайский Край</li>
+                <li class="header__popup-city">Амурская Область</li>
+                <li class="header__popup-city">Архангельская Область</li>
+                <li class="header__popup-city">Астраханская Область</li>
+                <li class="header__popup-city">Байконур Город</li>
+                <li class="header__popup-city">Башкортостан Республика</li>
+                <li class="header__popup-city">Брянская Область</li>
+                <li class="header__popup-city">Бурятия Республика</li>
+                <li class="header__popup-city">Владимирская Область</li>
+                <li class="header__popup-city">Волгоградская Область</li>
+                <li class="header__popup-city">Вологодская Область</li>
+                <li class="header__popup-city">Воронежская Область</li>
+                <li class="header__popup-city">Дагестан Республика</li>
+                <li class="header__popup-city">Еврейская Автономная область</li>
+                <li class="header__popup-city">Ивановская Область</li>
+                <li class="header__popup-city">Ингушетия Республика</li>
+                <li class="header__popup-city">Иркутская Область</li>
+                <li class="header__popup-city">Кабардино-Балкарская Республика</li>
+                <li class="header__popup-city">Калининградская Область</li>
+                <li class="header__popup-city">Калмыкия Республика</li>
+                <li class="header__popup-city">Калужская Область</li>
+                <li class="header__popup-city">Камчатский Край</li>
+                <li class="header__popup-city">Карелия Республика</li>
+                <li class="header__popup-city">Кемеровская Область</li>
+                <li class="header__popup-city">Кировская Область</li>
+                <li class="header__popup-city">Коми Республика</li>
+                <li class="header__popup-city">Костромская Область</li>
+                <li class="header__popup-city">Краснодарский Край</li>
+                <li class="header__popup-city">Красноярский Край</li>
+                <li class="header__popup-city">Крым Республика</li>
+                <li class="header__popup-city">Бурятия Республика</li>
+                <li class="header__popup-city">Владимирская Область</li>
+                <li class="header__popup-city">Волгоградская Область</li>
+                <li class="header__popup-city">Вологодская Область</li>
+                <li class="header__popup-city">Воронежская Область</li>
+                <li class="header__popup-city">Дагестан Республика</li>
+                <li class="header__popup-city">Еврейская Автономная область</li>
+                <li class="header__popup-city">Ивановская Область</li>
+                <li class="header__popup-city">Ингушетия Республика</li>
+                <li class="header__popup-city">Иркутская Область</li>
+                <li class="header__popup-city">Кабардино-Балкарская Республика</li>
+                <li class="header__popup-city">Калининградская Область</li>
+                <li class="header__popup-city">Калмыкия Республика</li>
+                <li class="header__popup-city">Калужская Область</li>
+                <li class="header__popup-city">Камчатский Край</li>
+                <li class="header__popup-city">Карелия Республика</li>
+                <li class="header__popup-city">Кемеровская Область</li>
+                <li class="header__popup-city">Кировская Область</li>
+                <li class="header__popup-city">Коми Республика</li>
+                <li class="header__popup-city">Костромская Область</li>
+                <li class="header__popup-city">Краснодарский Край</li>
+                <li class="header__popup-city">Красноярский Край</li>
+                <li class="header__popup-city">Крым Республика</li>
+              </ul>
+            </div>
+            <div class="header__popup__city-items">
+              <span class="header__areas-title">Населенный пункт:</span>
+              <ul class="header__popup-locality">
+                <li class="header__popup-areas">Абаза</li>
+                <li class="header__popup-areas">Абакан</li>
+                <li class="header__popup-areas">Агидель</li>
+                <li class="header__popup-areas">Адыгейск</li>
+                <li class="header__popup-areas">Азов</li>
+                <li class="header__popup-areas">Ак-Довурак</li>
+                <li class="header__popup-areas">Алапаевск</li>
+                <li class="header__popup-areas">Алатырь</li>
+                <li class="header__popup-areas">Алейск</li>
+                <li class="header__popup-areas">Александровск</li>
+                <li class="header__popup-areas">Алматы</li>
+                <li class="header__popup-areas">Алушта</li>
+                <li class="header__popup-areas">Амурск</li>
+                <li class="header__popup-areas">Анадырь</li>
+                <li class="header__popup-areas">Ангарск</li>
+                <li class="header__popup-areas">Анжеро-Судженск</li>
+                <li class="header__popup-areas">Апатиты</li>
+                <li class="header__popup-areas">Аргун</li>
+                <li class="header__popup-areas">Арзамас</li>
+                <li class="header__popup-areas">Армавир</li>
+                <li class="header__popup-areas">Армянск</li>
+                <li class="header__popup-areas">Арсеньев</li>
+                <li class="header__popup-areas">Артем</li>
+                <li class="header__popup-areas">Архангельск</li>
+                <li class="header__popup-areas">Балашиха</li>
+                <li class="header__popup-areas">Балашов</li>
+                <li class="header__popup-areas">Барабинск</li>
+                <li class="header__popup-areas">Алапаевск</li>
+                <li class="header__popup-areas">Алатырь</li>
+                <li class="header__popup-areas">Алейск</li>
+                <li class="header__popup-areas">Александровск</li>
+                <li class="header__popup-areas">Алматы</li>
+                <li class="header__popup-areas">Алушта</li>
+                <li class="header__popup-areas">Амурск</li>
+                <li class="header__popup-areas">Анадырь</li>
+                <li class="header__popup-areas">Ангарск</li>
+                <li class="header__popup-areas">Анжеро-Судженск</li>
+                <li class="header__popup-areas">Апатиты</li>
+                <li class="header__popup-areas">Аргун</li>
+                <li class="header__popup-areas">Арзамас</li>
+                <li class="header__popup-areas">Армавир</li>
+                <li class="header__popup-areas">Армянск</li>
+                <li class="header__popup-areas">Арсеньев</li>
+                <li class="header__popup-areas">Артем</li>
+                <li class="header__popup-areas">Архангельск</li>
+                <li class="header__popup-areas">Балашиха</li>
+                <li class="header__popup-areas">Балашов</li>
+                <li class="header__popup-areas">Барабинск</li>
+                <li class="header__popup-areas">Алапаевск</li>
+                <li class="header__popup-areas">Алатырь</li>
+                <li class="header__popup-areas">Алейск</li>
+                <li class="header__popup-areas">Александровск</li>
+                <li class="header__popup-areas">Алматы</li>
+                <li class="header__popup-areas">Алушта</li>
+                <li class="header__popup-areas">Амурск</li>
+                <li class="header__popup-areas">Анадырь</li>
+                <li class="header__popup-areas">Ангарск</li>
+                <li class="header__popup-areas">Анжеро-Судженск</li>
+                <li class="header__popup-areas">Апатиты</li>
+                <li class="header__popup-areas">Аргун</li>
+                <li class="header__popup-areas">Арзамас</li>
+                <li class="header__popup-areas">Армавир</li>
+                <li class="header__popup-areas">Армянск</li>
+                <li class="header__popup-areas">Арсеньев</li>
+                <li class="header__popup-areas">Артем</li>
+                <li class="header__popup-areas">Архангельск</li>
+                <li class="header__popup-areas">Балашиха</li>
+                <li class="header__popup-areas">Балашов</li>
+                <li class="header__popup-areas">Барабинск</li>
+                <li class="header__popup-areas">Барнаул</li>
+                <li class="header__popup-areas">Барыш</li>
+                <li class="header__popup-areas">Батайск</li>
+                <li class="header__popup-areas">Белгород</li>
+                <li class="header__popup-areas">Белово</li>
+                <li class="header__popup-areas">Белогорск</li>
+                <li class="header__popup-areas">Белокуриха</li>
+                <li class="header__popup-areas">Белоярский</li>
+                <li class="header__popup-areas">Бердск</li>
+                <li class="header__popup-areas">Березники</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

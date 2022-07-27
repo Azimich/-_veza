@@ -1,10 +1,23 @@
 export const initManagers = () => {
 
-  const mapHref = document.querySelectorAll('.geo');
+  const sever = document.querySelectorAll('.severo-zapad');
 
-  mapHref.forEach((element) => {
-    if (mapHref.getAttribute('#our-map')) {
-      element.classList.add('close-popup')
-    }
-  })
+  // sever.forEach(elem => {
+  //   elem.addEventListener('mouseenter', (e)=> {
+  //     elem.classList.add('active')
+  //   })
+  // })
+
+  // sever.forEach(elem => {
+  //   elem.addEventListener('mouseenter', (e)=> {
+  //     elem.style.fill = '#212121'
+  //   })
+  // });
+
+  // sever.forEach(elem => {
+  //   elem.addEventListener('mouseleave', (e)=> {
+  //     elem.style.fill = ''
+  //   })
+  // });
+
 }

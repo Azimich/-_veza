@@ -1,6 +1,6 @@
 import { popupOpen, popupClose, bodyLock, bodyUnlock } from './_helpers';
 
-export const initPopup = () => {
+export const initPopup = () =>{
   const popupLinks = document.querySelectorAll('.popup-links');
 
   if (popupLinks.length > 0) {
@@ -27,4 +27,4 @@ export const initPopup = () => {
         });
       }
     }
-}
+  }

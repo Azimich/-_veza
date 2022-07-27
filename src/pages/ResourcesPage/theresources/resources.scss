@@ -5,7 +5,6 @@
     margin: 100px auto 80px;
   }
 
-
   &__nav {
     margin: 0 auto 50px;
   }
@@ -44,7 +43,6 @@
 
     &.active {
       color: color(green);
-      font-weight: 500;
       
       @media (max-width: 900px) {
         color: color(white);
@@ -192,16 +190,63 @@
   }
 
   // Каталоги
+  .resources__catalogs-search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include ipadScreen {
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+  }
+
   &__catalogs-title {
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
-    margin-bottom: 50px;
     font-weight: 500;
+    color: color(dark);
+
+    @include ipadScreen {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
 
     @media (max-width: 500px) {
       font-size: 25px;
-      margin-bottom: 20px;
+    }
+  }
+
+  &__catalogs__input-box {
+    width: 30%;
+    position: relative;
+
+    @include ipadScreen {
+      width: 100%;
+    }
+
+    svg {
+      position: absolute;
+      right: 12px;
+      top: 9px;
+      width: 20px;
+      height: 20px;
+    }
+
+    path {
+      fill: grey;
+    }
+  }
+
+  &__catalogs-input {
+    padding-right: 40px;
+
+    &::placeholder {
+      color: grey;
+      font-size: 14px;
+      font-weight: 400;
     }
   }
 
@@ -220,10 +265,6 @@
     width: 49%;
 
     @media (max-width: 1100px) {
-      width: 80%;
-    }
-
-    @media (max-width: 700px) {
       width: 100%;
     }
   }
@@ -441,15 +482,27 @@
   }
 
   // Сертификаты
+  .certificates-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: color(dark);
+    margin-bottom: 30px;
+  }
+
   &__certificates-tab {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
   }
 
   &__sertificat__item {
     transition: all 0.3s;
     cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
   }
 
   &__sertificat__image-box {
@@ -467,21 +520,8 @@
     img {
       max-width: 100%;
       height: 100%;
-    }
-  }
-
-  &__sertificat__title {
-    font-weight: 500;
-    text-align: center;
-    line-height: 130%;
-    color: color(dark);
-    font-size: 18px;
-    margin: 0 auto 8px auto;
-    transition: all 0.3s;
-
-    @media (max-width: 1320px) {
-      line-height: 125%;
-      margin: 0 auto 5px;
+      transition: all 0.3s;
+      transform: scale(1);
     }
   }
 
@@ -489,150 +529,9 @@
     box-shadow: 0 0 5px color(green);
   }
 
-  &__sertificat__item:hover  &__sertificat__title {
-    color: color(green);
+  &__sertificat__item:hover &__sertificat__image-box > img {
+    transform: scale(1.1);
   }
-
-  &__sertificat__item:hover  &__sertificat__discription {
-    color: color(green);
-  }
-
-  &__sertificat__discription {
-    line-height: 133%;
-    text-align: center;
-    font-size: 16px;
-    transition: all 0.3s;
-
-    @media (max-width: 1320px) {
-      line-height: 125%;
-    }
-  }
-
-  // Анкетирование
-  &__questionnaire__search-box {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto 80px;
-    background: #F5F5F5;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-    padding: 50px 30px;
-    border-radius: 10px;
-
-    @include ipadScreen {
-      flex-direction: column;
-    }
-  }
-
-  &__questionnaire-text {
-    font-size: 20px;
-    color: color(dark);
-  }
-
-  &__questionnaire-input {
-    width: 50%;
-
-    @include ipadScreen {
-      margin: 30px 0;
-      width: 100%;
-    }
-
-    @include SEScreen {
-      margin: 20px 0;
-    }
-  }
-
-  &__questionnaire-button {
-
-    &:hover {
-      background-color: rgb(9, 103, 9);
-    }
-  }
-
-  &__questionnaire-questionnaire {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-    gap: 40px;
-    padding: 0 0 8px 0;
-
-    @media (max-width: 400px) {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-  }
-
-  &__questionnaire__questionnaire-item {
-    overflow: hidden;
-    background-color: #f5f5f5;
-    border-bottom: 5px solid transparent;
-    border-radius: 10px;
-    transition: all 0.3s;
-
-    @media (min-width: 1024px) {
-      &:hover {
-        border-color: color(green);
-        box-shadow: 0 0 5px #373636;
-      }
-    }
-
-    @include ipadScreen {
-      border-color: color(green);
-    }
-  }
-
-  &__questionnaire__questionnaire__img-box {
-    margin: 0 auto 20px;
-  }
-
-  &__questionnaire__questionnaire-title {
-    font-size: 25px;
-    font-weight: 300;
-    padding: 0 10px;
-    color: color(dark);
-    transition: all 0.3s;
-
-    @media (max-width: 1260px) {
-      font-size: 22px;
-    }
-
-    @include phoneScreen {
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
-  }
-
-  &__questionnaire__questionnaire-text {
-    font-size: 16px;
-    padding: 10px 10px 20px 10px;
-    line-height: 135%;
-    transition: all 0.3s;
-
-    @media (max-width: 1260px) {
-      padding: 5px 10px 15px 10px;
-      font-weight: 300;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    &__questionnaire__questionnaire-item:hover 
-    &__questionnaire__questionnaire-text {
-      color: color(green);
-    }
-
-    &__questionnaire__questionnaire-item:hover 
-     &__questionnaire__questionnaire-title {
-      color: color(green);
-    }
-  }
-
-  &__education__img-box {
-    width: 100%;
-    height: max-content;
-    border-radius: 20px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
 
    // Стили соцсетей
    &__icon-box {

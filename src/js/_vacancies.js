@@ -1,4 +1,3 @@
-
 export const initialVacanceis = () => {
 
   const checkEnterprises = document.querySelectorAll('.check-enterprises');
