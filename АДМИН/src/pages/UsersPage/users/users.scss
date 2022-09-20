@@ -1,0 +1,839 @@
+.users {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 50px;
+  }
+
+  &__search-box {
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+    div {
+      max-width: 1055px; 
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 50px 0;
+
+      @media (max-width: 1200px) {
+        flex-direction: column; 
+      }
+  
+      button {
+        height: 38px;
+      } 
+    }
+  }
+
+  &__search {
+    position: relative;
+    max-width: 1055px;
+    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+      margin: 0 0 15px 0;
+    }
+
+    svg {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      width: 20px;
+    }
+
+    path {
+      fill: #808080;
+    }
+
+    input {
+      padding-left: 35px; 
+      width: 400px;  
+
+      @media (max-width: 1250px) {
+        width: 350px;
+      }
+
+      @media (max-width: 1150px) {
+        width: 300px;
+      }
+
+      @media (max-width: 400px) {
+        width: 280px;
+      }
+    }
+  }
+
+  //Филтрация
+  &__filter {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1200px) {
+      display: none; 
+    }
+  }
+
+  &__filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background-color: color(white); 
+    border: 1.5px solid green;
+    color: green;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s; 
+
+    &:hover {
+      background-color: rgb(236, 236, 236);
+      border: 1.5px solid rgb(236, 236, 236);
+      color: #212121 !important;
+    }
+
+    &.active {
+      background-color: green;
+      color: color(white);
+      border-color: color(green);
+
+      &:hover {
+        color: color(white) !important;
+      }
+    }
+
+    &:first-child {
+      margin-right: 12px;
+
+      @include ipadScreen {
+        margin: 0 0 12px 0; 
+      }
+    }
+  }
+
+  &__tabs-items {
+    display: none;
+
+    &.active {
+      display: block; 
+    } 
+  }
+
+  &__head-bg {
+    background: #6F6F6F;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      width: 75%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(17px, 1fr));
+
+      li {
+        font-size: 16px;
+        line-height: 135%;
+        color: color(white);
+        margin: 0 12px;
+      }
+    }
+
+    span {
+      color: color(white);
+      margin: 0 10% 0 0;
+      font-size: 18px;
+    }
+  }
+
+  &__items-pc {
+    display: block;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__arrow-icon { 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    svg {
+      transform: rotate(90deg);
+      transition: all 0.3s; 
+    }
+  }
+
+  .registration {
+    width: 300px; 
+  }
+
+  &__item {
+    border-bottom: 1px solid #C4C4C4;
+    margin: 20px 0;
+    overflow: hidden;
+    height: 65px;
+    transition: all 0.3s;
+
+    &.active {
+      height: 125px;
+
+      svg {
+        transform: rotate(-90deg);
+      }
+    } 
+
+    &:first-child {
+      border-top: 1px solid transparent;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+      margin: 0 20px 0 0;
+      width: 100%;
+    }
+
+    path {
+      fill: #212121; 
+    }
+  }
+
+  &__item-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buttons {
+    display: flex; 
+    align-items: center;
+ 
+    .last-button {
+      background-color: grey;
+      margin: 0 0 0 15px;  
+      width: 125px;
+    } 
+
+    select {
+      background-color: #d9d9d9;
+      color: color(dark); 
+      width: 130px;
+      height: 42px;
+      border-radius: 5px;
+      margin-left: 8px;
+      outline: none;
+      border: none;
+      padding: 0 5px;
+      cursor: pointer;
+
+      option:hover {
+        background-color: color(green); 
+        color: color(white);
+      }
+    }
+  }
+
+  &__sub-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 2% 0 2%;
+  }
+
+  //Для мобильной версии
+  &__filter-mob {
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: flex;
+    }
+
+    @media (max-width: 580px) {
+      flex-direction: column;
+    }
+  }
+
+  &__filter__item-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px; 
+    background-color: color(white); 
+    border: 1.5px solid green;
+    color: green;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s; 
+
+    &:hover {
+      background-color: rgb(236, 236, 236);
+      border: 1.5px solid rgb(236, 236, 236);
+      color: #212121 !important;
+    }
+
+    &.active {
+      background-color: green;
+      color: color(white);
+      border-color: color(green);
+
+      &:hover {
+        color: color(white) !important;
+      }
+    }
+
+    @media (max-width: 400px) {
+      padding: 10px 15px;  
+    }
+
+    &:last-child {
+      margin-left: 12px; 
+
+      @media (max-width: 580px) {
+       margin-left: 0; 
+      }
+    }
+  }
+
+  &__items-mobile {
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block; 
+    }
+  }
+
+  &__tabs__items-mob {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item-mob {
+    background-color: #f3f3f3;
+    border-radius: 5px; 
+    margin-bottom: 30px;
+    padding: 10px;
+  } 
+
+  &__titles-mob {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 8px 8px 8px; 
+    border-bottom: 1px solid rgb(206, 206, 206);
+
+    span {
+      font-size: 16px;
+      color: color(dark);
+    }
+  }
+
+  &__info-mob {
+    background-color: color(white);
+    margin: 38px 0; 
+    padding: 15px 10px;  
+    border-radius: 5px;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    &.active{
+      height: 165px;
+
+      svg {
+        transform: rotate((-90deg));
+      }
+    }
+
+    h1 {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      svg {
+        transform: rotate(90deg);
+        transition: all 0.3s;
+
+        path {
+          fill: #212121;
+        }
+      }
+    }
+  }
+
+  &__info__mob-list {
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    li {
+      text-align: right;
+    }
+
+    .boss {
+      text-align: left;
+    }
+  }
+
+  &__buttons-mob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px; 
+
+    .mobile_button {
+      margin: 0;
+      width: 180px !important; 
+      background-color: color(green) !important;  
+    }
+
+    a {
+      &:last-child {
+        background-color: grey; 
+        width: 120px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  // Попап для удаления
+  .popup__users-deleted {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .popup__users-deleted.open .popup__users-deleted-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .popup__users-deleted-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 500px;
+    height: 100vh;
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: transparent;
+    overflow: hidden;
+
+    @media (max-width: 1320px) {
+      width: 60%;
+    } 
+
+    @include phoneScreen {
+      width: 100%;
+      padding: 30px 15px;
+    }
+  }
+
+  .popup__users-deleted-content {
+    background-color: color(white);
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+
+    @include phoneScreen {
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      color: color(dark);
+      font-weight: 400;
+      margin: 15px 0 50px 0;
+    }
+  }
+
+  .users__deleted__close-popup {
+    position: absolute;
+    right: 3% !important;
+    top: 3% !important;
+    color: color(dark);
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 99;
+    color: grey;
+  }
+
+  .popup__users__deleted-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      width: 120px;
+
+      &:last-child {
+        background-color: grey;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  // Попап для назначения роли
+  .popup__users-assign {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .popup__users-assign.open .popup__users-assign-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .popup__users-assign-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: transparent;
+    overflow: hidden;
+
+    @include phoneScreen {
+      width: 100%;
+      padding: 30px 15px;
+    }
+  }
+
+  .popup__users-assign-content {
+    background-color: color(white);
+    padding: 50px;
+    position: relative;
+    height: 100vh;
+    max-width: 100%; 
+    margin: 0 auto; 
+  }
+
+  .users__assign__close-popup {
+    position: absolute;
+    right: 50px !important;
+    top: 25px !important;
+    color: color(dark);
+    font-weight: 400;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 99;
+    color: grey;
+  }
+
+
+  //Стили для селекта
+  .container {
+    padding: 40px 0 20px 0;
+    max-width: 1500px;
+    margin: 0 auto; 
+  }
+  
+  .select-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    h2 {
+      font-size: 35px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: color(dark);
+    }
+  }
+  
+  .select-box .options-container {
+    background: #E7E7E7;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+
+    &.active {
+      max-height: 295px;
+      opacity: 1;
+      margin-bottom: 12px; 
+      overflow-y: scroll;
+    }
+  }
+  
+  .selected {
+    background: #E7E7E7;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: color(dark);
+    position: relative;
+    order: 0;
+
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url('../assets/images/arrow_select.svg');  
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 10px;
+      border-radius: 2px;
+      transition: all 0.4s;
+    }
+  }
+  
+  .options-container.active + .selected::after {
+    transform: rotate(-180deg);
+  }
+  
+  .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #E7E7E7;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .options-container::-webkit-scrollbar-thumb {
+    background: green;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .option, .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background: rgb(193, 193, 193);
+  }
+  
+  .select-box label {
+    cursor: pointer;
+    color: color(dark); 
+  }
+  
+  .option .radio {
+    display: none;
+  }
+
+  .select__button {
+    margin-top: 25px;
+  }
+
+  //Второй селект
+  .select-box_2, .select-box_3 {
+    cursor: pointer;
+  }
+
+  .select-box_2 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+    label {
+      cursor: pointer;
+      color: color(dark); 
+    }
+  }
+
+  .options-container_2 {
+    background: #E7E7E7;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+
+    &.active {
+      max-height: 295px; 
+      opacity: 1; 
+      margin-bottom: 8px;
+      overflow-y: scroll;
+    }
+  }
+
+  .options-container_2::-webkit-scrollbar {
+    width: 8px;
+    background: #E7E7E7;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .options-container_2::-webkit-scrollbar-thumb {
+    background: green;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .options-container_2.active + .selected_2::after {
+    transform: rotate(-180deg);
+  }
+
+  .option_2 {
+    padding: 12px 24px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(193, 193, 193);
+    }
+  }
+
+  .radio {
+    display: none;
+  }
+
+  .selected_2 {
+    background: #E7E7E7;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: color(dark);
+    position: relative;
+    order: 0;
+    padding: 12px 24px;
+
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url('../assets/images/arrow_select.svg');  
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 10px;
+      border-radius: 2px;
+      transition: all 0.4s;
+    }
+  }
+
+  //Стили для третего селекта
+  .select-box_3 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+    label {
+      cursor: pointer;
+      color: color(dark); 
+    }
+  }
+
+  .options-container_3 {
+    background: #E7E7E7;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+
+    &.active {
+      max-height: 215px; 
+      opacity: 1; 
+      margin-bottom: 8px;
+    }
+  }
+
+  .options-container_3.active + .selected_3::after {
+    transform: rotate(-180deg);
+  }
+
+  .option_3 {
+    padding: 12px 24px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(193, 193, 193);
+    }
+  }
+
+  .selected_3 {
+    background: #E7E7E7;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: color(dark);
+    position: relative;
+    order: 0;
+    padding: 12px 24px;
+
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url('../assets/images/arrow_select.svg');  
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 10px;
+      border-radius: 2px;
+      transition: all 0.4s;
+    }
+  }
+}

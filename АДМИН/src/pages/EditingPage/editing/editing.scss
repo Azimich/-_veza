@@ -1,0 +1,85 @@
+.editing {
+  margin: 200px 0 80px 0;
+
+  &__container-background {
+    background: #F3F3F3;
+    border-radius: 10px;
+    max-width: 1080px; 
+    margin: 0 auto;
+    padding: 80px 70px;
+
+    @include phoneScreen {
+      padding: 40px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 20px;
+    }
+  }
+
+  &__content {
+
+    h1 {
+      font-size: 30px;
+      line-height: 145%;
+      letter-spacing: 0.025em;
+      color: color(dark);
+      font-weight: 500;
+      margin-bottom: 40px;
+
+      @include phoneScreen {
+        margin-bottom: 4%;
+        font-size: 22px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+    } 
+  }
+
+  &__data-block {
+    margin: 0 auto;
+    display: flex;
+
+    @include phoneScreen {
+      flex-direction: column;
+    }
+  }
+
+  &__items {
+    width: 100%;
+
+    &:first-child {
+      margin-right: 50px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    
+    &:last-child {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__names {
+    margin-bottom: 40px;
+    color: #414141;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      background-color: #8a8a8a;
+      height: 0.9px; 
+      width: 100%;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

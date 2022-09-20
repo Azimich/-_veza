@@ -1,0 +1,181 @@
+.industry {
+  padding: 0 0 150px 0;
+
+  &__banner {
+    max-width: 1920px;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    @include backgroundImage(cover);
+    background-image: url('../assets/images/industry_banner.jpg'); 
+
+    @include tabletScreen {
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/industry_banner_ipad.jpg'); 
+    }
+
+    @include ipadScreen {
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/industry_banner_mob.jpg'); 
+    }
+  }
+  
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    margin: 300px 0 0 0;
+
+    @include phoneScreen {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__way-title {
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    overflow: hidden;
+    z-index: 1; 
+    position: relative;
+  }
+
+  &__way {
+    background-image: url('../assets/images/industry_1.jpg');
+    width: 100%;
+    height: 100%;
+    @include backgroundImage(cover);
+    border-radius: 10px; 
+
+    &:nth-child(2) {
+      background-image: url('../assets/images/industry_2.jpg');
+      width: 100%;
+      height: 100%;
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+    }
+
+    &:nth-child(3) {
+      background-image: url('../assets/images/industry_3.jpg');
+      width: 100%;
+      height: 100%;
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+    }
+
+    &:nth-child(4) {
+      background-image: url('../assets/images/industry_4.jpg');
+      width: 100%;
+      height: 100%;
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+    }
+
+    &:nth-child(5) {
+      background-image: url('../assets/images/industry_5.jpg');
+      width: 100%;
+      height: 100%;
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+    }
+  }
+
+  .last__industry {
+    background: rgb(209, 209, 209);
+    padding: 30% 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+
+    @include phoneScreen {
+      padding: 20% 0; 
+    }
+  }
+
+  .last__way {
+    position: relative;
+    background-color: #009247;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+
+    @include phoneScreen {
+      height: 40vw;
+      width: 40vw;
+    }
+
+    input {
+      display: none !important;
+      opacity: 0;
+    }
+
+    label {
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+      display: block;
+      width: 70%;
+      height: 70%;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  &__way-box {
+    background: rgba(86, 95, 84, 0.45);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 30px 20px;  
+    overflow: hidden;
+    border-radius: 10px; 
+  }
+
+  &__way-title {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 90%;
+    letter-spacing: 0.025em;
+    margin-bottom: 15px;
+
+    @media (max-width: 1360px) {
+      font-size: 40px;
+      line-height: 42px;
+    }
+
+    @include phoneScreen {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 135%;
+    letter-spacing: 0.025em;
+    color: #DDDDDD;
+    max-width: 370px;
+
+    span {
+      margin: auto 0 auto auto !important; 
+    }
+  }
+}

@@ -1,0 +1,431 @@
+.four__pattern {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 50px;
+  }
+
+  //Стили для селекта
+  .tamplates__container {
+    padding: 40px 0 20px 0;
+  }
+
+  .tamplates__select-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    h2 {
+      font-size: 35px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: color(dark);
+    }
+  }
+
+  .tamplates__select-box .tamplates__options-container {
+    background: #E0EFDE;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+  }
+
+  .selected {
+    background: #AEDEA8;
+    color: color(dark);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    order: 0;
+  }
+
+  .selected::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/images/arrow_select.svg');  
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    border-radius: 2px;
+    transition: all 0.4s;
+  }
+
+  .tamplates__options-container.active {
+    max-height: 295px;
+    opacity: 1;
+  }
+
+  .tamplates__options-container.active + .selected::after {
+    transform: rotate(-180deg);
+  }
+
+  .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+
+  .tamplates__option {
+    width: 100%; 
+    background-color: transparent;
+    color: color(dark);
+
+    p {
+      padding: 12px 24px;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: #AEDEA8; 
+      }
+    }
+  }
+
+  &__swiper-continer {
+    margin-bottom: 5%; 
+
+    p {
+      display: flex;
+      align-items: center;
+      background: #60955B;
+      color: color(white);
+      padding: 1% 0 1% 2%;
+      font-size: 18px;
+      margin-bottom: 1%; 
+  
+      svg {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__slider {
+    padding: 50px 120px 50px 120px;
+    margin: 0 auto;
+
+    @include ipadScreen {
+      padding: 50px 80px;
+    }
+
+    @include phoneScreen {
+      padding: 50px; 
+    }
+  }
+
+  .swiper-container {
+    overflow-x:hidden;
+    overflow-y: hidden;
+  }
+
+  &__slide-box {
+    display: flex;
+    width: 70% !important;
+    margin: 0 auto; 
+  }
+
+  &__slider-slide {
+    background: #8BA091;
+    padding: 15% 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    &:nth-child(1) {
+      background: #9DBFA8;
+    }
+    &:nth-child(2) {
+      background: #D9D9D9;
+    }
+    &:nth-child(3) {
+      background: #BAC2BC;
+    }
+    &:nth-child(4) {
+      background: #76877a;
+    }
+    &:nth-child(5) {
+      background: #a6cfc1;
+    }
+    &:nth-child(6) {
+      background: #9cb2b5;
+    }
+  }
+
+  &__slider-img {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background-color: color(green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 12vw;
+    width: 12vw;
+
+    label {
+      display: block;
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage($bgSize: 100% 100%);
+      width: 70%; 
+      height: 70%; 
+      cursor: pointer;
+    }
+
+    input {
+      display: none !important; 
+      opacity: 0;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background-color: color(lightgreen);
+
+    @include phoneScreen {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    position: absolute;
+  }
+
+  @include phoneScreen {
+    .swiper-button-prev:after,
+    .swiper-button-next::after {
+      display: none;
+    }
+  }
+
+  &__add-banner {
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin-bottom: 5%;
+
+    
+    .last {
+      background: rebeccapurple;
+    }
+  }
+
+  &__banner-input {
+    position: relative;
+    background-color: color(green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+
+    label {
+      display: block;
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage($bgSize: 100% 100%);
+      width: 70%; 
+      height: 70%; 
+      cursor: pointer;
+    }
+
+    input {
+      display: none !important; 
+      opacity: 0;
+    }
+  }
+
+  &__text-block {
+    margin-bottom: 5%;
+
+    h4 {
+      padding: 1% 0 1% 2%;
+      font-size: 18px;
+      background: #60955B;
+      color: color(white);
+      margin-bottom: 1%;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    padding: 1% 0 25% 2%;
+    font-size: 16px; 
+    background: #E2E2E2;
+    color: color(dark);
+
+  }
+
+  &__key-points {
+    h1 {
+      padding: 1% 0 1% 2%;
+      font-size: 18px;
+      background: #E2E2E2;
+      color: color(dark);
+      margin-bottom: 1%;
+      font-weight: 400;
+    }
+  }
+  
+  &__points-add {
+    display: flex;
+    align-items: center;
+    background: #60955B;
+    color: color(white);
+    padding: 1% 0 1% 2%;
+    font-size: 18px;
+    margin-bottom: 1%; 
+
+    svg {
+      margin-right: 6px;
+    }
+  }
+
+  &__subpoints {
+    padding: 1% 0 1% 2%;
+    font-size: 18px;
+    background: #E2E2E2;
+    color: color(dark);
+    margin-bottom: 1%;
+    font-weight: 400;
+  }
+
+  &__points-banner {
+    display: flex;
+    align-items: center;
+    background: #a7b2a6;
+    margin: 5% 0; 
+  }
+
+  &__points__images-box {
+    padding: 15% 20%;
+    background: #E2E2E2;
+  }
+
+  &__points-images {
+    position: relative;
+    background-color: color(green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+
+    label {
+      display: block;
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage($bgSize: 100% 100%);
+      width: 70%; 
+      height: 70%; 
+      cursor: pointer;
+    }
+
+    input {
+      display: none !important; 
+      opacity: 0;
+    }
+  }
+
+  &__banner-info {
+    width: 100%; 
+    padding: 0 2%;
+
+    h3 {
+      padding: 1% 0 1% 2%;
+      font-size: 18px;
+      background: #60955B;
+      color: color(white);
+      margin-bottom: 1%;
+      font-weight: 400;
+    }
+  } 
+
+  &__banner-text {
+    padding: 1% 0 75% 2%;
+    font-size: 18px;
+    background: #E2E2E2;
+    color: color(dark);
+    margin-bottom: 1%;
+    font-weight: 400;
+  }
+
+  &__subinformation {
+    margin-bottom: 5%;
+
+    h3 {
+      padding: 1% 2% 1% 0%;
+      font-size: 18px;
+      background: #60955B;
+      color: #FFF;
+      margin-bottom: 1%;
+      font-weight: 400;
+      text-align: right;
+    }
+
+    p {
+      padding: 1% 2% 25% 0%;
+      font-size: 16px;
+      background: #E2E2E2;
+      color: #212121;
+      text-align: right;
+    }
+  }
+
+  &__video-box {
+    background: #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15% 20%;
+    margin-bottom: 5%;
+
+    span {
+      position: relative;
+      background-color: color(green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+
+      label {
+        display: block;
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage($bgSize: 100% 100%);
+        width: 70%; 
+        height: 70%; 
+        cursor: pointer;
+      }
+
+      input {
+        display: none !important; 
+        opacity: 0;
+      }
+    }
+  }
+
+  .save__button {
+    margin: 50px auto;
+    cursor: pointer;
+    width: 200px;
+  }
+}

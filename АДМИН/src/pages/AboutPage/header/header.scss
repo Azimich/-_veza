@@ -1,0 +1,355 @@
+
+.header {
+  box-shadow: 0px 3px 5px rgba(30, 158, 0, 0.9);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  .wrapper {
+    overflow: visible;
+  }
+
+  &__icons {
+    position: relative;
+
+    @media (max-width: 1200px) {
+      display: none; 
+    }
+  }
+ 
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+
+     @media (max-width: 1200px) {
+      padding: 25px 0 30px 0;
+    }
+  }
+
+  &__logo-box {
+    position: relative;
+    height: 28px;
+    z-index: 2;
+
+    @include phoneScreen {
+      width: 105px;
+    }
+  }
+
+  &__logo {
+    height: 30px;
+
+     @media (max-width: 1200px) {
+      width: 90px;
+    }
+  }
+
+  //lovation
+  &__location {
+    position: absolute;
+    left: -35px;
+    top: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+     @media (max-width: 1200px) {
+      left: 0;
+      top: 34px;
+      width: 200px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+  
+      path {
+        fill: green;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1200px) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: rgba(255, 255, 255, 0.99);
+      backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 80px 0 900px 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+      z-index: 1;
+    }
+
+    &.active {
+      transform: translateX(0%);
+    }
+  }
+
+  &__menu-list {
+    margin: 0 15px;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    transition: 0.3s;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0;
+      border-top: 1px solid #bdbdbd56;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      transition: all 0.3s;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .last {
+      border-bottom: 1px solid #bdbdbd56;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__menu-list:hover {
+      background-color: green;
+    }
+
+    &__menu-list:hover &__menu-link {
+      color: color(white);
+    }
+  }
+
+  &__menu-link {
+    color: green;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      width: 0;
+      height: 2px; 
+      background-color: color(green); 
+      transition: width 0.3s; 
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }           
+
+    &:hover:after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      height: 2px; 
+      background-color:  color(lightgreen); 
+      transition: width 0.3s;  
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }           
+
+    &:hover {
+      color: color(lightgreen);
+    }
+
+    @media (max-width: 1200px) {
+      padding: 20px 330px;
+    }
+
+    @include phoneScreen {
+      padding: 20px 250px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 20px 200px;
+    }
+
+    @media (max-width: 500px) {
+      padding: 20px 150px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 20px 120px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 20px 100px;
+    }
+  }
+
+  .mobile__search-box {
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+      margin: 5% 0 0 0;
+    }
+  }
+
+  &__icon__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1200px){
+      display: none;
+    } 
+  }
+
+  &__icon {
+    margin: 5px 8px 0 8px;
+    cursor: pointer;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: rgb(0, 155, 0);
+      transition: all 0.3s;
+
+      &:hover {
+        path {
+          fill: green;
+        }
+      }
+    }
+
+    // Анимация колоколчика
+    .push-icons {
+      border-radius: 50%;
+      transition: .3s;
+      -webkit-animation: hoverWaves linear 1s infinite;
+      animation: hoverWaves linear 2s infinite;
+    }
+  
+    .push__icon {
+      animation: 3s ease 1s normal none 0 running shakes;
+      animation-iteration-count: infinite;
+      color: green;
+      transition: .3s all;
+    }
+
+    .push__icon {
+      width: 25px;
+      height: 25px;
+      position: relative;
+
+      &::after {
+        content: "2";
+        font-size: 11px;
+        color: #FFF;
+        position: absolute;
+        top: 8px;
+        text-align: center;
+        right: -1px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: #009247;
+        color: #FFF;
+      } 
+    }
+
+    .push__icon-size {
+      width: 25px;
+      height: 25px; 
+    }
+
+    .user__icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    .search-icon {
+      width: 30px !important;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    &:after {
+      content: "";
+      width: 35px;
+      height: 36px;
+      background-color: #FFF;
+      box-shadow: 0px 0px 6px rgb(0 0 0 / 25%);
+      border-radius: 50%;
+      position: absolute;
+      top: 14px;
+      right: 22px;
+      z-index: -1;
+
+      @media (max-width: 1200px) {
+        width: 36px;
+        height: 36px;
+        top: -7px;
+        right: -4px;
+      } 
+    }
+  }
+
+  &__line-1,
+  &__line-2,
+  &__line-3 {
+    width: 20px;
+    height: 1.5px;
+    margin: 4px;
+    background-color: #212121;
+    transition: all 0.3s ease;
+  }
+
+  .header__mobile-menu.toggle .header__line-1 {
+    transform: rotate(-45deg) translate(-5px, 4px)
+  }
+
+  .header__mobile-menu.toggle .header__line-3 {
+    transform: rotate(45deg) translate(-4px,-3px);
+  }
+
+  .header__mobile-menu.toggle .header__line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .header__location-title {
+    color: green;
+    font-size: 16px;
+  }
+}
