@@ -8,10 +8,21 @@
   &__items {
     display: flex;
     align-items: center;
+    position: relative;
     margin-bottom: 30px;
 
     @media (max-width: 950px) {
       flex-direction: column;
+    }
+
+    .editing__icons {
+      z-index: 1;
+    } 
+
+    .archive {
+      left: auto;
+      right: 0;
+      top: 0;  
     }
   }
   
@@ -20,6 +31,7 @@
     height: 240px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 
     @media (max-width: 950px) {
       width: 100%;
@@ -45,6 +57,8 @@
       font-weight: 500;
       font-size: 25px;
       color: color(dark);
+      display: flex;
+      align-items: center;
     } 
 
     p {
@@ -52,6 +66,10 @@
       line-height: 150%;
       color: color(dark);
       margin-bottom: 18px;
+
+      .pen__icon {
+        margin: auto 0 auto auto;
+      }
     }
   }
   
@@ -79,5 +97,174 @@
   &__pred-button {
     margin-top: 50px;
   }
+
+  .education__item-added {
+    display: flex;
+    align-items: center;
+    background-color: rgb(237, 237, 237); 
+    padding: 10px;
+    border-radius: 10px;
+
+    .added__video {
+      width: 360px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw; 
+      width: 10vw;
   
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+  
+    .education__info {
+      
+      input {
+        padding: 10px;
+        width: 100%;
+        background-color: rgb(212, 211, 211);
+        margin-bottom: 2%;
+      }
+
+      textarea {
+        padding: 10px;
+        width: 100%;
+        background-color: rgb(212, 211, 211);
+        margin-bottom: 4%;
+        border-radius: 8px;
+      }
+    }
+  
+    .buttons {
+      display: flex;
+      align-items: center;
+
+      button {
+        background-color: rgb(212, 211, 211);
+        color: color(dark);
+        margin-left: 3%;
+      }
+
+      .last__button {
+        margin: auto auto auto 2%;
+        background: #009247;
+        display: flex;
+        align-items: center;
+        padding: 6px;
+        border-radius: 3px;
+
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+
+  // стили для мадального окна
+  .popup__test {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .popup__test.open .popup__test-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .popup__test-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 1000px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+
+  .test__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .popup__test-content {
+    padding: 5%;
+    width: 100%;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+      color: color(dark);
+      margin-bottom: 3%; 
+    }
+  }
+
+  .popup__test-input {
+    display: flex;
+    align-items: center;
+
+    input {
+      height: 42px;
+    }
+
+    button {
+      margin-left: 2%;
+    }
+  }
 }

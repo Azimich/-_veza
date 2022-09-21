@@ -427,8 +427,38 @@
     }
   }
 
+  //Стили для добавления нового пункта
+  .added__pharagraphe {
+    margin-top: 2%;
+  }
 
+  .input-btn {
+    display: flex;
+    align-items: center;
 
+    input {
+      width: 200px;
+      border-color: color(white);
+      color: color(white); 
+ 
+      &::placeholder {
+        color: #fff;
+      }
+    }
+
+    path {
+      stroke: green;
+    }
+
+    button {
+      margin: auto auto auto 2%;
+      background: color(white);
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      border-radius: 3px;
+    }
+  }
 
   /* Выезжающий блок с текстом для панели слева направо */
   &__effects-cover li >  &__effect-to-right {

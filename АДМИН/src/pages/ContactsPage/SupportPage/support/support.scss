@@ -521,6 +521,8 @@
   &__info-subtitle {
     font-weight: 500;
     color: color(dark);
+    display: flex;
+    align-items: center;
   }
 
   &__info-text {
@@ -534,5 +536,220 @@
 
   &__info-link {
     height: 38px;
+  }
+
+
+  // стили для мадального окна
+  &__form__select-popup {
+    display: flex;
+    align-items: center;
+  }
+
+  .popup__select {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: color(white); 
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .popup__select.open .popup__select-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup__select-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 1000px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+  
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+  
+  .select__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .popup__select-content {
+    padding: 5%;
+    width: 100%;
+  
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+      color: color(dark);
+      margin-bottom: 3%; 
+    }
+  }
+  
+  .popup__select-input {
+    display: flex;
+    align-items: center;
+  
+    input {
+      height: 42px;
+    }
+  
+    button {
+      margin-left: 2%;
+    }
+  }
+
+  .popup__select-items {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    h1 {
+      margin-bottom: 5%
+    }
+  }
+
+  .popup__select__left-block {
+    width: 48%;
+  }
+
+  .popup__select-inputs {
+    .pen__icon {
+      margin: 0 2% 0 0;
+    }
+  }
+
+  .popup__select-paragraph {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+
+  .popup__select__right-block {
+    width: 45%; 
+  }
+
+  .input-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 5%; 
+
+    button {
+      margin: auto auto auto 2%;
+      background: color(green);
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      border-radius: 3px;
+      
+      path { 
+        stroke: #fff;
+      }
+    }
+  }
+
+   // стили для мадального окна
+   .popup__telega {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .popup__telega.open .popup__telega-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .popup__telega-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 1000px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+
+  .telega__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .popup__telega-content {
+    padding: 5%;
+    width: 100%;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+      color: color(dark);
+      margin-bottom: 3%; 
+    }
+  }
+
+  .popup__telega-input {
+    display: flex;
+    align-items: center;
+
+    input {
+      height: 42px;
+    }
+
+    button {
+      margin-left: 2%;
+    }
   }
 }

@@ -250,6 +250,10 @@
       backdrop-filter: blur(20px);
       z-index: 1;
     }
+
+    .editing__icons {
+      z-index: 2;
+    }
   }
 
   &__video {
@@ -283,6 +287,8 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     margin-bottom: 20px;
+    display: flex; 
+    justify-content: center;
 
     @include ipadScreen {
       font-size: 60px;

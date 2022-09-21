@@ -790,7 +790,7 @@
     top: 50%;
     left: 50%;
     right: 0;
-    width: 420px;
+    width: 500px; 
     border-radius: 10px;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
@@ -828,6 +828,8 @@
     text-transform: uppercase;
     color: color(green);
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
   }
 
   &__factories-servces {
@@ -836,6 +838,7 @@
     color: gray;
     font-size: 15px;
     margin-bottom: 6px;
+    align-items: center; 
 
     &:last-child {
       margin-bottom: 0;
@@ -1132,7 +1135,7 @@
     top: 50%;
     left: 50%;
     right: 0;
-    width: 700px;
+    width: 1000px;
     border-radius: 10px;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
@@ -1156,14 +1159,14 @@
   }
 
   .popup__video-content {
-    padding: 10%;
+    padding: 5%;
+    width: 100%;
 
     h1 {
       font-size: 35px;
       font-weight: 500;
       color: color(dark);
       margin-bottom: 3%; 
-      text-transform: uppercase;
     }
   }
 

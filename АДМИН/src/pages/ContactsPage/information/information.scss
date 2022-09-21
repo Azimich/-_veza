@@ -961,6 +961,8 @@
     font-size: 25px;
     color: #404040;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 
     @include phoneScreen {
       font-size: 22px;
@@ -975,6 +977,8 @@
       font-weight: 400;
       font-size: 16px;
       color: #5c5c5c;
+      display: flex;
+      align-items: center;
     }
 
     h5 {
@@ -982,6 +986,8 @@
       font-size: 18px;
       color: #5c5c5c;
       margin-top: 6px;
+      display: flex;
+      align-items: center; 
       
       @include phoneScreen {
         font-size: 16px;
@@ -1001,7 +1007,7 @@
     margin-bottom: 12px;
     transition: all 0.3s;
 
-    svg {
+    .maps__geo {
       width: 24px;
       height: 24px;
       margin-right: 12px;
@@ -1030,9 +1036,11 @@
     &:hover {
       color: green;
 
-      path {
-        fill: green;
-      }
+      .maps__geo {
+        path {
+          fill: green;
+        }
+      } 
     }
   }
 
@@ -1149,6 +1157,7 @@
   }
 
   &__managers-item {
+    position: relative;
     padding: 0 0 15px 0;
     border-radius: 10px;
     overflow: hidden;
@@ -1159,10 +1168,16 @@
       box-shadow: 0px -1px 5px #000000;
       border-color: color(green);
     }
+
+    .archive {
+      bottom: auto;
+      top: 15px;
+    }
   }
 
   &__managers__img-box {
     margin: 0 auto;
+    position: relative;
   }
 
   &__managers__info-box {
@@ -1175,11 +1190,18 @@
     text-align: center;
     font-size: 18px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__managers__info-text {
     padding: 8px;
     font-size: 16px;
+     
+    span {
+      margin: auto 0 auto auto;
+    }
   }
 
   // Maps
@@ -1271,11 +1293,25 @@
     overflow: hidden;
     transition: all 0.3s;
     border-bottom: 5px solid transparent;
+    position: relative;
 
     &:hover {
       box-shadow: 0px -1px 5px #000000;
       border-color: color(green);
     }
+
+    .archive {
+      bottom: auto;
+      top: 15px;
+    }
+  }
+
+  &__secretary__img-box {
+    position: relative;
+  }  
+
+  &__logistick__img-box { 
+    position: relative;
   }
 
   &__logistick__info-box,
@@ -1309,6 +1345,62 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .information__added-user {
+    display: flex;
+    align-items: center;
+    background: #f3f3f3;
+    justify-content: center;
+    height: 390px;
+    border-radius: 10px;
+  }
+
+  .last__way {
+    position: relative;
+    background-color: #009247;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+
+    @include phoneScreen {
+      height: 40vw;
+      width: 40vw;
+    }
+
+    input {
+      display: none !important;
+      opacity: 0;
+    }
+
+    label {
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+      display: block;
+      width: 70%;
+      height: 70%;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  .inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%; 
+
+    input {
+      width: 45%;
+      height: 42px;
+
+      &:nth-child(2) {
+        margin: 0 2%; 
+      }
+    }
   }
 }
 

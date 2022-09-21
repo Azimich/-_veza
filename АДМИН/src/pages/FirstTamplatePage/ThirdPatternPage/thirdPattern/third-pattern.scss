@@ -86,6 +86,27 @@
     }
   }
 
+  //нижние селекты
+  &__second-select, 
+  &__third-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #AEDEA8;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+
+  &__second-select {
+    margin-bottom: 1%;
+  }
+  
+  &__third-select {
+    margin-bottom: 3%;
+  }  
+
+
   &__swiper-continer {
     margin-bottom: 5%; 
 

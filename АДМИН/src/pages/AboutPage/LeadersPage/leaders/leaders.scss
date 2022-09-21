@@ -955,6 +955,7 @@
     height: auto;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 
     @include phoneScreen {
       border-radius: 10px;
@@ -963,6 +964,10 @@
     img {
       object-fit: revert;
     }
+
+    .editing__icons {
+      left: 20px;
+    } 
   }
 
   .swiper-pagination {
