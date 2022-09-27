@@ -175,3 +175,22 @@
 @import '../pages/AboutUsersEditing//editingAboutUsers/about-users';
 @import '../pages/AboutUsersEditing/footer/footer'; 
 
+//Стили страницы Добавления картинок на слайре в референсах
+@import '../pages/GalleryAddedPage/header/header';
+@import '../pages/GalleryAddedPage/galleryAdd/galleryAdded';
+@import '../pages/GalleryAddedPage/footer/footer'; 
+
+//Стили Страницы Расчёты
+@import '../pages/CalculationsPage/header/header';
+@import '../pages/CalculationsPage/calculations/calculations';
+@import '../pages/CalculationsPage/footer/footer'; 
+
+//Стили для страницы редактирование Отрасль
+@import '../pages/DecisionsPage/EditingDecisionPage/header/header';
+@import '../pages/DecisionsPage/EditingDecisionPage/edit-decision/edit-decision';
+@import '../pages/DecisionsPage/EditingDecisionPage/footer/footer'; 
+
+//Стили страницы Добавления картинок на слайре в вокансиях
+@import '../pages/GalleryAddedVacancyPage/header/header';
+@import '../pages/GalleryAddedVacancyPage/galleryAddedVacancy/galleryAddedVacancy';
+@import '../pages/GalleryAddedVacancyPage/footer/footer'; 

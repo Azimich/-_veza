@@ -1,24 +1,21 @@
 
-import Swiper, { Navigation, Pagination, EffectCards } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectCards, Autoplay } from 'swiper';
 
 export const initSwiper = () => {
-
   // banner slider
   let swiper1 = new Swiper ('.banner__slider', {
-    modules: [Navigation, Pagination],
+    modules: [ Navigation, Pagination, Autoplay ],
     grabCursor: true,
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: true,
     simulateTouch: true,
     loop:true,
   });
 
-  
   // gallery slider
   const swiper2 = new Swiper ('.gallery__slider', {
-    modules: [Navigation, Pagination, EffectCards],
+    modules: [Navigation, Pagination, EffectCards, Autoplay],
     effect: 'cards',
+    autoplay: true,
     EffectCards: {
       rotate: true,
       slideShadows: false,
@@ -31,7 +28,6 @@ export const initSwiper = () => {
 
     pagination: {
       el: '.swiper-pagination',
-
       clickable: true,
       dynamicBullets: true,
     },
@@ -39,7 +35,6 @@ export const initSwiper = () => {
     simulateTouch: true,
     loop:true,
   });
-
 
   //swiper-popup
   const swiper3 = new Swiper(".vacancies__slider", {
@@ -67,19 +62,19 @@ export const initSwiper = () => {
     loop:true,
   });
 
+  // Слайдер для страницы история завода
   const swiper4 = new Swiper(".mySwiper", {
-    modules: [Navigation, Pagination, EffectCards],
-    slidesPerView: 5,
+    modules: [Navigation, Autoplay],
     spaceBetween: 5,
     loop: true,
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay:true,
+    slidesPerView: 3,
 
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    // freeMode: true,
 
     breakpoints: {
       300: {
@@ -97,6 +92,26 @@ export const initSwiper = () => {
       1024: {
         slidesPerView: 6,
         spaceBetween: 5,
+      },
+    },
+  });
+
+  // Слайдер для страницы над новостями
+  const swiper9 = new Swiper(".news__slider__container", {
+    modules: [Pagination, Autoplay],
+    loop: true,
+    autoplay: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
     },
   });

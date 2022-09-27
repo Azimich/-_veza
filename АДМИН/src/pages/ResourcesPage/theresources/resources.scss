@@ -172,7 +172,7 @@
     }
   }
   
-  .bim__close-popup {
+  .social__close-popup {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -208,6 +208,121 @@
     }
   }
 
+  // Модальное окно для ссылок
+  .popup__BIM__added-cart {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .popup__BIM__added-cart.open .popup__BIM__added-cart-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup__BIM__added-cart-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 500px !important;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+  
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+  
+  .BIM__added-cart__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray !important;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .popup__BIM__added__cart-images {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 5%; 
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+  
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+  }
+
+  .popup__BIM__added-cart-content {
+    padding: 15% 5%; 
+    width: 100%;
+    
+    button {
+      margin: auto;
+    }
+  }
+
+  .popup__BIM__added-cart-input {
+
+    input {
+      height: 42px;
+      margin-bottom: 12px;
+
+      &:last-child {
+        padding: 10px 0 100px 10px;
+      }
+    }
+  }
+
 
   &__BIM-item {
     border-bottom: 5px solid transparent;
@@ -216,6 +331,7 @@
     padding: 1px;
     border-radius: 10px;
     box-shadow: 0 0 5px #21212136;
+    position: relative;
 
     &:last-child {
       display: flex;
@@ -246,6 +362,31 @@
 
     &__BIM-item:hover &__BIM-text {
       color: #F89A00;
+    }
+  }
+
+  &__BIM-date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: #dedede;
+
+    span {
+      color: color(dark);
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    svg {
+      margin: 0 5px 0 0; 
+      width: 18px;
+      height: 18px;  
+    }
+
+    path {
+      fill: rgb(21, 21, 21);
     }
   }
 
@@ -313,7 +454,7 @@
   }
 
   &__BIM__img-box {
-    height: 230px;
+    height: 190px;
     width: max-content;
     margin: 0 auto;
   }
@@ -533,6 +674,86 @@
 
 
   // Вопросы
+  // Модальное окно для ссылок
+  .popup__question {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .popup__question.open .popup__question-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup__question-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 1000px !important;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+  
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+  
+  .question__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray !important;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .popup__question-content {
+    padding: 10% 5%;
+    width: 100%;
+  
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+      color: color(dark);
+      margin-bottom: 3%; 
+    }
+  }
+
+  .popup__question-input {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      height: 42px;
+    }
+
+    button {
+      margin-top: 2%;
+    }
+  }
+
   &__faq__search-box {
     display: flex;
     justify-content: space-around;

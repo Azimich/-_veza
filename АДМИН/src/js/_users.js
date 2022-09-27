@@ -95,23 +95,5 @@ export const initUsers = () => {
       optionsContainer_2.classList.remove("active");
     });
   });
-
-  // Скрипт для третего селекта
-  const selected_3 = document.querySelector(".selected_3");
-  const optionsContainer_3 = document.querySelector(".options-container_3");
-  const optionsList_3 = document.querySelectorAll(".option_3");
-  
-  if (selected_3, optionsContainer_3) {
-    selected_3.addEventListener("click", () => {
-      optionsContainer_3.classList.toggle("active");
-    });
-  }
-  
-  optionsList_3.forEach(el => {
-    el.addEventListener("click", () => {
-      selected_3.innerHTML = el.querySelector("label").innerHTML;
-      optionsContainer_3.classList.remove("active");
-    });
-  });
 }
 

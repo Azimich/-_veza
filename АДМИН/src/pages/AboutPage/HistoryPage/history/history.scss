@@ -9,7 +9,7 @@
   }
 
   &__swiper {
-    margin: 80px 0;
+    margin: 80px 0 25px 0;
   }
 
   &__slide-item {
@@ -22,18 +22,124 @@
     transition: all 0.3s;
     position: relative;
 
-    &:hover {
+    &.active {
       background-color: #c8c8c8;
+    } 
+  }
+
+  .history__button {
+    margin-bottom: 8%;
+    display: flex;
+    align-items: center;
+    width: 180px; 
+
+    svg {
+      margin-left: 12px;
+    }
+  }
+
+  // Модальное окно для ссылок
+  .popup__add_list {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .popup__add_list.open .popup__add_list-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup__add_list-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 500px !important;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+  
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+  
+  .add_list__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray !important;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .popup__add_list-content {
+    padding: 15% 5%; 
+    width: 100%;
+    
+    button {
+      margin: auto;
+    }
+  }
+
+  .popup__add_list-input {
+    
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+      color: #212121;
+      margin-bottom: 4%; 
+    }
+
+    input {
+      height: 42px;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 5%;
+      }
     }
   }
 
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    display: flex;
-    justify-content: center;
+    display: flex; 
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 0;
+
+    .editing__icons {
+      position: static;  
+    }
+
+    .pen__icon,
+    .removed {
+      height: 28px;
+      width: 28px;
+      padding: 8px;  
+      margin: 2px;
+    }
   }
 
   .swiper-button-prev:after,
@@ -48,9 +154,9 @@
     background-image: url('../assets/images/slick-arrow.svg'); 
     left: 5px;
     right: auto;
-    top: 62%;
-    width: 34.5px;
-    height: 34.5px;
+    top: 59%;
+    width: 34.6px;
+    height: 34.9px;
   }
 
   .swiper-button-next {
@@ -58,9 +164,9 @@
     background-image: url('../assets/images/slick-arrow-next.svg'); 
     right: 5px;
     left: auto;
-    top: 62%;
-    width: 34.5px;
-    height: 34.5px;
+    top: 59%;
+    width: 34.6px;
+    height: 34.9px;
   }
 
   &__start__top-description {

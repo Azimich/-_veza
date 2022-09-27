@@ -1,0 +1,334 @@
+.edit__decision {
+  margin: 200px auto;
+
+  @include phoneScreen {
+    margin: 130px auto 50px;
+  }
+
+  &__container {
+  }
+  
+  &__top-box {
+    display: flex;
+    align-items: start;
+    margin-bottom: 5%;
+  }
+  
+  &__images {
+    width: 500px;
+    height: 400px;
+    margin-right: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+  
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      } 
+    }
+  }
+  
+  &__top-info {
+    width: 70%;
+    
+    .decision__top__info-input {
+      width: 100%;  
+      margin-bottom: 3%;
+
+      &:nth-child(2) { 
+        padding: 10px 10px 220px 10px;
+      } 
+    }
+  }
+
+  &__objects {
+
+    .objects__title-input {
+      margin-bottom: 2%; 
+    }
+  }
+  
+  &__obj-items {
+    margin-bottom: 5%;
+  }
+  
+  &__obj__items-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .inputs__paragraph {
+    width: 90%;
+    margin-bottom: 5%;
+
+    input {
+      margin-bottom: 3%;
+    }
+  }
+
+  .input__add-check {
+    position: relative;
+  }
+
+  .input__check-industry {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    background: #009247;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 0 4px 4px 0; 
+
+    path {
+      stroke: #fff;
+    }
+  }
+  
+  &__obj__item-top {
+      width: 33%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #f3f3f3;
+      border-radius: 10px;
+      padding: 3%; 
+
+      &:nth-child(2) {
+        margin: 0 20px;
+      }
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+      margin-bottom: 2%;
+  
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+  }
+  
+  &__obj__items-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__obj__item-bottom {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    background-color: #f3f3f3;
+    border-radius: 10px; 
+    padding: 3%; 
+
+    &:first-child { 
+      margin: 0 20px 0 0; 
+    }
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+      margin-bottom: 2%; 
+  
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__equipment__block {
+
+    .objects__title-input {
+      margin-bottom: 2%;
+    }
+  }
+
+  &__equipment__top-items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__equipment__top-item {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    border-radius: 10px; 
+    padding: 3%; 
+    margin-bottom: 20px;
+
+    &:nth-child(2) {
+      margin: 0 20px 20px 20px; 
+    }
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+  
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__equipment__bottom-items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__equipment__bottom-item {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    border-radius: 10px; 
+    padding: 3%; 
+
+    &:first-child { 
+      margin: 0 20px 0 0; 
+    } 
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+  
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }  
+  }
+
+  .button {
+    margin: 80px auto 0;  
+  }
+}

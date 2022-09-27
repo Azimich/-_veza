@@ -7,7 +7,7 @@
 
   //Стили для селекта
   .tamplates__container {
-    padding: 40px 0 20px 0;
+    padding: 40px 0 12px 0;
   }
 
   .tamplates__select-box {
@@ -99,14 +99,9 @@
   }
 
   &__second-select {
-    margin-bottom: 1%;
+    margin-bottom: 3%; 
   }
   
-  &__third-select {
-    margin-bottom: 3%;
-  }  
-
-
   &__swiper-continer {
     margin-bottom: 5%; 
 

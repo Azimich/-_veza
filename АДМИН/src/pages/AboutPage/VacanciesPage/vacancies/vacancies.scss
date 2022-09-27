@@ -882,75 +882,44 @@
     }
   }
 
-  &__vacancies__search-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
-    background-color: #f3f3f3;
-    max-width: 1200px;
-    margin: 0 auto 100px;
-    padding: 50px 30px;
+  .vacancies__search-box {
+    background-color: #F3F3F3;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 0px 5px #000000b3;
+    margin-bottom: 50px;
 
-    @include ipadScreen {
-      flex-direction: column;
+    div {
+      max-width: 1055px;
+      margin: 0 auto;
+      display: flex;
       align-items: center;
-      max-width: 60%;
+      padding: 50px 0;
+
+      @media (max-width: 1200px) {
+        flex-direction: column; 
+        padding: 40px 15px;  
+      }
+  
+      button {
+        height: 38px; 
+      } 
     }
 
-    @include phoneScreen {
-      max-width: 80%;
+    select {
+      position: relative;
+      max-width: 1055px;
+      margin: 0 auto;
+      width: 400px;
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: 1200px) {
+        margin: 0 0 15px 0;
+        padding: 10px 15px;
+        width: 100%;
+      }
     }
-
-    @media (max-width: 500px) {
-      max-width: 100%;
-      padding: 20px 10px;
-    }
-  }
-
-  &__vacancies__search-item {
-    position: relative;
-
-    @include ipadScreen {
-      margin-bottom: 30px;
-      width: 100%;
-    }
-
-    .editing__icons {
-      left: 20px;
-    }
-  }
-
-  &__vacancies__search-subtitle {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 145%;
-    color: color(dark);
-    padding: 0 0 8px 0;
-  }
-
-  &__vacancies__search-input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1.5px solid #2121219c;
-    width: 100%;
-    transition: all 0.2s;
-
-    &::placeholder { 
-      color: #3131318e;
-      font-size: 14px;
-    }
-
-    &:focus {
-      border-color: color(green);
-      box-shadow: 0px 0px 2px #078707b3;
-    }
-  }
-
-  &__vacancies__search-button {
-    margin: 0 auto;
   }
 
   &__vacancies__vacancy-container {
@@ -1316,14 +1285,17 @@
   }
 
   @include phoneScreen {
-
     .swiper-button-prev:after,
     .swiper-button-next::after {
       display: none;
     }
   }
 
-  
+  .gallery__icon {
+    position: absolute;
+    left: 0; 
+    bottom: 15px;
+  }
 
    // Popup-forms
    .popup {
@@ -1383,8 +1355,12 @@
     }
   
     .close-popup {
-      color: #E6E7E9;
+      color: #bbbbbb;
       cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 35px;
     }
   
     &__heading{
