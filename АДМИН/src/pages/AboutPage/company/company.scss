@@ -5,6 +5,13 @@
     margin: 130px auto 80px;
   }
 
+  label {
+    input {
+      display: none;
+      opacity: 0; 
+    }
+  }
+
   //Навигация Табов
   &__nav {
     margin: 0 auto 40px;
@@ -1244,6 +1251,10 @@
     overflow: hidden;
     position: relative;
 
+    &.last__item{
+      background-color: transparent;  
+    }
+ 
     .editing__icons {
       bottom: auto;
       top: 15px;
@@ -1310,6 +1321,82 @@
         }
       }
     }
+  }
+
+  &__added-card {
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    height: 380px;
+    border-radius: 10px;
+    padding: 0 15px 20px 15px;
+    margin-bottom: 5%;
+  }
+
+  &__bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 0 2% 0;
+
+    img {
+      width: 110px;
+      height: 110px; 
+    }
+  }
+
+  .last__way-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; 
+    margin-bottom: 5%; 
+  }
+
+  .last__way {
+    position: relative;
+    background-color: #009247;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+
+    input {
+      display: none !important;
+      opacity: 0;
+    }
+
+    label {
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+      display: block;
+      width: 70%;
+      height: 70%;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  .inputs__information {
+    width: 100%;
+
+    input {
+      margin-bottom: 5%;
+      background: color(white);
+    }
+
+    button {
+      width: 130px;
+    } 
   }
 }
 

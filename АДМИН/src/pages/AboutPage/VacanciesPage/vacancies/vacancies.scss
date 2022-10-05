@@ -934,32 +934,58 @@
     padding: 30px 40px;
     border-radius: 10px;
     margin-bottom: 30px;
-    border-bottom: 3px solid transparent;
+    position: relative;
     transition: all 0.3s;
 
     @media (min-width: 1024px) {
       &:hover {
         background: #D4DDC9;
         border-color: color(green);
-        box-shadow: 0 0 5px rgb(48, 53, 48);
+        box-shadow: 0 20px 35px rgb(203, 203, 203);
+        transform: translateY(-3px);
       }
-    }
-
-    @include ipadScreen {
-      border-color: color(green);
-      border-color: color(green);
     }
 
     @include ipadScreen {
       flex-direction: column;
       align-items: start;
+      border-color: color(green);
       padding: 20px 10px;
+    }
+
+    .pen__icon {
+      position: absolute;
+      bottom: 8px;
+      left: -6px;
+    }
+
+    .archive { 
+      top: 8px;
+      bottom: auto;
+      left: auto;
+      right: 8px;
+    }
+
+    &__vacancies-info {
+      input {
+        background-color: color(color);
+      }
     }
   }
 
   @media (min-width: 1024px) {
     &__vacancies__vacancy-item:hover  &__vacancies__vacncy-button {
       background-color: color(green);
+    }
+  }
+
+  &__vacancies-info {
+    width: 100%;
+
+    input {
+      width: 90%;
+      margin-bottom: 12px;
+      background-color: color(white);
     }
   }
 
@@ -1072,7 +1098,7 @@
   }
 
   .popup__link-content {
-    padding: 10% 5%;
+    padding: 5%;
     width: 100%;
 
     h1 {
@@ -1214,7 +1240,7 @@
     position: absolute;
     right: 5% !important;
     top: 5% !important;
-    color: gray;
+    color: rgb(197, 197, 197);
     font-weight: 300;
     font-size: 30px;
     cursor: pointer;
@@ -1349,21 +1375,22 @@
       right: 0;
     }
   
-    &.open  .popup__vacancies-content {
+    &.open .popup__vacancies-content {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
     }
-  
-    .close-popup {
-      color: #bbbbbb;
-      cursor: pointer;
+
+    .popup__vac-close {
       position: absolute;
-      right: 10px;
-      top: 10px;
-      font-size: 35px;
+      right: 15px;
+      top: 15px;
+      color: gray !important;
+      font-weight: 400;
+      font-size: 30px;
+      cursor: pointer;
     }
   
-    &__heading{
+    &__heading {
       font-weight: 800;
       font-size: 32px;
       line-height: 39px;

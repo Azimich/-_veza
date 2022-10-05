@@ -98,18 +98,12 @@
   &__title {
     text-align: center;
     margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__contacts-subtitle {
     margin-bottom: 60px;
     color: #515151;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     @media (max-width: 500px) {
       margin: 0 0 40px 0;
@@ -487,24 +481,34 @@
   }
 
   &__info-telegram{
-    padding-bottom: 5px;
+    padding: 20px 0 50px;
   }
 
   &__info__tg-item {
     margin-bottom: 15px;
-    padding: 20px;
-    background-color: #D4DDC9;
+    padding: 30px 20px;
+    background-color: #f3f3f3; 
     border-radius: 10px;
     opacity: 0.8;
     transition: all 0.3s;
 
     &:hover {
-      opacity: 1;
-      box-shadow: 0 0 5px green;
+      background: #D4DDC9;
+      border-color: color(green);
+      box-shadow: 0 20px 35px rgb(203, 203, 203);
+      transform: translateY(-3px);
     }
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    .support__info__tg {
+
+      input {
+        margin-bottom: 12px; 
+        background: color(white);
+      } 
     }
   }
 
@@ -539,7 +543,7 @@
   }
 
 
-  // стили для мадального окна
+  // Стили для мадального окна
   &__form__select-popup {
     display: flex;
     align-items: center;
@@ -608,6 +612,10 @@
       font-weight: 500;
       color: color(dark);
       margin-bottom: 3%; 
+    }
+
+    button {
+      margin: 50px 0 0 0;
     }
   }
   

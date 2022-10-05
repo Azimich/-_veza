@@ -115,7 +115,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-    padding: 5px 0;
+    padding: 5px 0 35px 0;
 
     @media (max-width: 800px) {
       max-width: 90%;
@@ -171,13 +171,12 @@
       width: 90%;
     }
   }
-  
-  .social__close-popup {
+
+  .close-popup.bim__close-popup {
     position: absolute;
-    right: 15px;
-    top: 15px;
-    color: gray !important;
-    font-weight: 400;
+    right: 14px;
+    top: 10px;
+    font-size: 35px;
     font-size: 30px;
     cursor: pointer;
   }
@@ -205,6 +204,78 @@
 
     button {
       margin-left: 2%;
+    }
+  }
+
+  // Модальное окно для редакирования карточки
+  .popup__BIM-editing {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .popup__BIM-editing.open .popup__BIM-editing-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup__BIM-editing-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 500px !important;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+  
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+  
+  .BIM-editing__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray !important;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .popup__BIM-editing-content {
+    width: 100%; 
+    padding: 15% 5%; 
+  }
+
+  .popup__BIM-editing-input {
+
+    input {
+      height: 42px;
+      margin-bottom: 12px;
+
+      &:last-child {
+        padding: 10px 0 100px 10px;
+      }
     }
   }
 
@@ -325,12 +396,11 @@
 
 
   &__BIM-item {
-    border-bottom: 5px solid transparent;
     transition: all 0.3s;
     overflow: hidden;
     padding: 1px;
     border-radius: 10px;
-    box-shadow: 0 0 5px #21212136;
+    box-shadow: 0 0 4px #21212136;
     position: relative;
 
     &:last-child {
@@ -341,9 +411,8 @@
 
     @media (min-width: 768px) {
       &:hover {
-        border-color: #F89A00;
         border-radius: 10px;
-        box-shadow: 0 0 10px #21212182;
+        box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.2);
       }
     }
 
@@ -357,7 +426,6 @@
   @media (min-width: 768px) {
     &__BIM-item:hover &__BIM__item-box {
       border-radius: 0;
-      box-shadow: 0 0 3px transparent;
     }
 
     &__BIM-item:hover &__BIM-text {
@@ -371,6 +439,7 @@
     bottom: 0;
     padding: 10px;
     background-color: #dedede;
+    border-radius: 0 5px 0 5px;
 
     span {
       color: color(dark);
@@ -437,7 +506,6 @@
 
   &__BIM__item-box {
     overflow: hidden;
-    box-shadow: 0 0 5px #21212157;
     position: relative;
     transition: all 0.3s;
 
@@ -457,6 +525,13 @@
     height: 190px;
     width: max-content;
     margin: 0 auto;
+      
+    label {
+      input {
+        display: none;
+        opacity: 0;  
+      }
+    }
   }
 
   &__BIM__info-box {
@@ -485,7 +560,7 @@
     text-align: center;
     transition: all 0.3s;
 
-    span {
+    a {
       margin: auto 0 auto auto;
     }
   }
@@ -747,6 +822,7 @@
 
     input {
       height: 42px;
+      margin-bottom: 12px; 
     }
 
     button {
@@ -861,6 +937,11 @@
       span {
         margin: 0 20px 0 0;
       }
+
+      a {
+        margin: 0 20px auto auto;
+      }
+
     }
 
     span {
@@ -902,6 +983,80 @@
     svg {
       width: 30px;
       height: 30px;
+    }
+  }
+
+  // Модальное окно для ссылок
+  .popup__question-1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.1s;
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .popup__question-1.open .popup__question-1-body {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup__question-1-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 1000px !important;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+  
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+  
+  .question-1__close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray !important;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .popup__question-1-content {
+    padding: 10% 5%;
+    width: 100%;
+  }
+
+  .popup__question-1-input {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      height: 42px;
+      margin-bottom: 12px; 
+    }
+
+    button {
+      margin-top: 2%;
     }
   }
 
@@ -1005,6 +1160,13 @@
 
     span {
       z-index: 2;
+      
+      label {
+        input {
+          display: none;
+          opacity: 0;  
+        }
+      }
     }
  
     img {
@@ -1049,6 +1211,13 @@
 
     img {
       transition: all 0.3s;
+    }
+
+    label {
+      input {
+        display: none;
+        opacity: 0;
+      }
     }
 
     .title__images {

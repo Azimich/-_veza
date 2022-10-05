@@ -32,6 +32,13 @@
     background: #f3f3f3;
     padding: 0 10px 30px 10px;
     border-radius: 10px;
+    position: relative;
+    transition: all 0.2s;
+
+    &:hover {
+      box-shadow: 0px 14px 30px rgba(221, 221, 221, 0.08);
+      transform: translateY(-3px);
+    }
 
     .editing__icons {
       left: 0;

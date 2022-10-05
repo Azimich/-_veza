@@ -1,4 +1,5 @@
 .history {
+  margin-bottom: 150px;
 
   .hide {
     display: none;
@@ -260,6 +261,13 @@
     span {
       z-index: 1;
     }
+
+    label {
+      input {
+        display: none;
+        opacity: 0;
+      }
+    }
   }
 
   .styles-img-1,
@@ -355,6 +363,13 @@
     span {
       z-index: 1;
     }
+
+    label {
+      input {
+        display: none;
+        opacity: 0;
+      }
+    }
   }
 
   .styles-img-3,
@@ -427,6 +442,13 @@
       cursor: pointer;
       z-index: 2;
     }
+  }
+
+  .save__history {
+    margin: 0 auto;
+    width: 230px;
+    height: 50px; 
+    font-size: 18px;
   }
 }
 
