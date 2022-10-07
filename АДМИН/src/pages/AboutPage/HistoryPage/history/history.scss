@@ -25,7 +25,15 @@
 
     &.active {
       background-color: #c8c8c8;
+      a {
+        color: color(dark);
+      }
     } 
+
+    .history__slide-item-link {
+      color: color(dark);
+      padding: 16px 30px 16px 68px;
+    }
   }
 
   .history__button {
@@ -128,10 +136,11 @@
     display: flex; 
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px 0;
+    padding: 0;        
 
     .editing__icons {
-      position: static;  
+      position: absolute;
+      left: 0;  
     }
 
     .pen__icon,

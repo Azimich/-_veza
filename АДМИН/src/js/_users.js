@@ -95,5 +95,14 @@ export const initUsers = () => {
       optionsContainer_2.classList.remove("active");
     });
   });
+
+  const selectBtn = document.querySelector('.select-btn');
+  const selectInput = document.querySelector('.select-input');
+
+  if (selectBtn, selectInput) {
+    selectBtn.addEventListener('click', ()=> {
+      selectInput.classList.toggle('active')
+    });
+  }
 }
 

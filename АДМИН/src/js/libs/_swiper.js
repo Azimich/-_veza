@@ -64,7 +64,7 @@ export const initSwiper = () => {
 
   // Слайдер для страницы история завода
   const swiper4 = new Swiper(".mySwiper", {
-    modules: [Navigation, Autoplay],
+    modules: [Navigation],
     spaceBetween: 5,
     loop: true,
     autoplay:true,

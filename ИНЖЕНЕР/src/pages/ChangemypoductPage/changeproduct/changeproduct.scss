@@ -1,0 +1,285 @@
+.changeproduction {
+  margin: 180px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 80px;
+  }
+
+   //Swiper
+   &__swiper__container {
+    margin-bottom: 6%;
+
+    @include ipadScreen {
+      margin-bottom: 3%; 
+    }
+  }
+
+  &__title {
+    font-size: 35px;
+  }
+
+  &__title__slide {
+    margin-bottom: 2%;
+
+    @include phoneScreen {
+      margin-bottom: 6%;
+    }
+  }
+
+  &__swiper__item {
+    padding: 2% 0;  
+    position: relative;
+
+    img {
+      max-width: 100%;
+      height: 500px;
+      margin: 0 auto;
+      object-fit: cover;  
+
+      @include ipadScreen {
+        width: auto; 
+        height: auto; 
+      }
+    }
+
+    @include ipadScreen {
+      padding: 0;
+    } 
+  }
+
+  &__swiper__info {
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    bottom: 10%;
+    padding: 1% 5%; 
+
+    p {
+      color: color(dark);
+      background-color: #b6e9df;
+      padding: 15px;
+      line-height: 150%;
+      border-radius: 5px;
+
+      @include phoneScreen {
+        border-radius: 0 0 5px 5px;  
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+
+    @include ipadScreen {
+      padding: 0;
+    }
+
+    @include phoneScreen {
+      position: sticky;
+    }
+  }
+
+  //Навигации и пагинации
+  .swiper-pagination {
+    bottom: 0;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background-color: color(lightgreen);
+
+    @include phoneScreen {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    position: absolute;
+  }
+
+  @include phoneScreen {
+    .swiper-button-prev:after,
+    .swiper-button-next::after {
+      display: none;
+    }
+  }
+
+  &__top-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2%; 
+
+    p {
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #f3f3f3;
+      font-size: 16px;
+      line-height: 145%;
+      color: color(dark);
+      width: 49%;
+    }
+  }
+
+  &__bottom-info {
+    margin-bottom: 5%; 
+
+    p {
+      font-size: 16px;
+      line-height: 145%;
+      color: color(dark);
+
+      &:first-child {
+        margin-bottom: 3%;
+        padding: 15px;
+        border-radius: 5px;
+        background-color: #f3f3f3;
+        font-size: 16px;
+        line-height: 145%;
+        color: color(dark);
+      }
+    }
+  }
+
+  &__add-brance {
+    button {
+      margin: 15px 0;
+    }
+  }
+
+  &__brance-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #E0EFDE; 
+    color: #414141;
+    border-radius: 5px;
+    margin-bottom: 2%; 
+    cursor: pointer;
+
+    path {
+      fill: #212121;
+    }
+  }
+
+  &__brance-checkboxes {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  &__checbox {
+
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+
+  .changeproduction__checbox {
+    --background: #fff;
+    --border: #9c9c9c;
+    --border-hover: #BBC1E1;
+    --border-active: #009247;
+    --tick: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s;
+    padding-bottom: 14px; 
+
+    input, svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+
+    span {
+      margin-left: 12px; 
+      color: color(dark); 
+    }
+  }
+
+  .changeproduction__checbox .check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    outline: none;
+    background: var(--background);
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0 !important;
+    border: 0 !important;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+    
+    &:hover {
+      --s: 2px;
+      --b: var(--border-hover);
+    }
+
+    &:checked {
+      --b: var(--border-active);
+    }
+  }
+
+  .changeproduction__checbox svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    top: 0;
+    left: -10px;
+    margin: 0 0 0 10px;
+    transform: scale(var(--scale, 1)) translateZ(0);
+  }
+
+  .changeproduction__checbox.path .check:checked {
+    --s: 1px;
+    transition-delay: 0.2s;
+  }
+
+  .changeproduction__checbox.path .check:checked + svg {
+    --a: 16.1 86.12;
+    --o: 102.22;
+  }
+
+  .changeproduction__checbox.path svg {
+    stroke-dasharray: var(--a, 86.12);
+    stroke-dashoffset: var(--o, 86.12);
+    transition: stroke-dasharray 0.3s, stroke-dashoffset 0.3s;
+  }
+
+  .changeproduction__checbox.bounce {
+    --stroke: var(--tick);
+  }
+
+  .changeproduction__checbox.bounce .check:checked {
+    --s: 11px;
+  }
+
+  .changeproduction__checbox.bounce svg {
+    --scale: 0;
+  }
+
+  .changeproduction__checbox.bounce .check:checked + svg {
+    animation: bounce 0.2s linear forwards 0.2s;
+  }
+  
+  .vacancies__label__checbox {
+    margin-left: 8px;
+    font-size: 16px;
+    color: color(dark);
+  }
+}

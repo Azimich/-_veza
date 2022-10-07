@@ -682,7 +682,7 @@
   }
 
   .select__button {
-    margin-top: 25px;
+    margin-top: 15px;
   }
 
   //Второй селект
@@ -772,68 +772,33 @@
   }
 
   //Стили для третего селекта
-  .select-box_3 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    
-    label {
-      cursor: pointer;
+  .select__last-supervisor {
+
+    button {
+      margin: 20px 0 10px auto;
+      width: 240px;
+      background-color: #E7E7E7; 
       color: color(dark); 
     }
-  }
 
-  .options-container_3 {
-    background: #E7E7E7;
-    color: #f5f6fa;
-    max-height: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.4s;
-    border-radius: 8px;
-    overflow: hidden;
-    order: 1;
+    input {
+      opacity: 0;
+      height: 0;
+      transform: translate(-50%, -50%) scale(0); 
+      transition: all 0.3s;
+      background-color: #E7E7E7; 
+      border-color: #E7E7E7;
 
-    &.active {
-      max-height: 215px; 
-      opacity: 1; 
-      margin-bottom: 8px;
-    }
-  }
+      &::placeholder {
+        color: color(dark); 
+      }
 
-  .options-container_3.active + .selected_3::after {
-    transform: rotate(-180deg);
-  }
-
-  .option_3 {
-    padding: 12px 24px;
-    cursor: pointer;
-
-    &:hover {
-      background: rgb(193, 193, 193);
-    }
-  }
-
-  .selected_3 {
-    background: #E7E7E7;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    color: color(dark);
-    position: relative;
-    order: 0;
-    padding: 12px 24px;
-
-    &::after {
-      content: "";
-      width: 20px;
-      height: 20px;
-      background-image: url('../assets/images/arrow_select.svg');  
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: absolute;
-      right: 10px;
-      border-radius: 2px;
-      transition: all 0.4s;
+      &.active {
+        opacity: 1;
+        transform: translate(0%, 0%) scale(1);
+        height: 45px; 
+      }
+      
     }
   }
 }

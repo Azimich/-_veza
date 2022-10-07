@@ -1,0 +1,39 @@
+{
+  "name": "veza",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/html/index.html --open",
+    "build": "parcel build ./src/html/*.html --public-url ./ --no-source-maps"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-clean-dist": "^0.0.6",
+    "parcel-plugin-html-partials": "^0.0.6",
+    "parcel-plugin-imagemin": "^4.0.2",
+    "video.js": "^7.19.2"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "@fancyapps/ui": "^4.0.26",
+    "autoprefixer": "^9.8.6",
+    "babel": "^6.23.0",
+    "cssnano": "^4.1.10",
+    "jquery": "^3.6.0",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.0.9",
+    "sass": "^1.23.7",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.2.3",
+    "vanilla-tilt": "^1.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitflic.ru/project/web-sajt/web-front-end.git"
+  },
+  "author": "Azim",
+  "description": ""
+}
