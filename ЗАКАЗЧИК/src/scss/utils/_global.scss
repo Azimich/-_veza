@@ -84,6 +84,92 @@ section {
   }
 }
 
+//Стили для тех-поддержки
+.header__nav {
+  padding: 30px 0 50px 0 !important;
+
+  @include ipadScreen {
+    padding: 25px 0 30px 0 !important; 
+  }
+}
+
+.header__location {
+  top: 39px;
+
+  @include phoneScreen {
+    top: 30px; 
+  }
+}
+
+.header__icon__box, 
+.mobile__search-box {
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .header__menu {
+    padding: 90px 0 900px 0 !important;
+  }
+}
+
+.header__menu-link,
+.footer__menu-link { 
+  font-size: 14px !important; 
+
+  &::after {
+    height: 1.5px !important;
+  }
+
+  &:hover:after {
+    height: 1.5px !important;
+  }
+} 
+
+.support__phone {
+  position: absolute;
+  top: 33px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  left: -15px;
+  width: 170px;
+  color: color(green);
+
+  svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  @include ipadScreen {
+    font-size: 16px;
+    top: 45px;
+
+    svg {
+      width: 24px;
+      height: 24px; 
+    }
+  }
+}
+
+//Стили для футера
+.footer__navigation {
+  li {
+    margin: 0 0 0 30px !important;
+
+    @include phoneScreen {
+      margin: 0 0 0 0 !important;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer__navigation {
+    margin: 30px 0 !important; 
+  }
+}
+
+
+
 .swiper-3d .swiper-slide-shadow {
   background: unset !important;
 }
