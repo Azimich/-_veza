@@ -147,4 +147,40 @@
       display: none;
     }
   }
+
+   //Стили для блока Расчёт
+   .calculation__container {
+    margin: 100px auto;
+  }
+
+  .calculation__info {
+    h2 {
+      text-align: center;
+      margin-bottom: 1%; 
+      text-transform: uppercase; 
+      color: color(dark);
+      font-size: 35px; 
+
+      @include phoneScreen {
+        font-size: 25px;
+        margin-bottom: 2%;
+      }
+    }
+ 
+    p {
+      font-size: 16px;
+      text-align: center;
+      opacity: 0.8; 
+      max-width: 60%;
+      line-height: 145%;
+      margin: 0 auto 4%; 
+    }
+  }
+
+  .conculation__button {
+    margin: 0 auto;
+    width: 220px; 
+    padding: 15px;
+    height: auto;
+  }
 }

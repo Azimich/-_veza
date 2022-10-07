@@ -37,7 +37,6 @@
       <nav class="vacancies__nav">
         <ul class="company__nav__menu tabs">
           <li class="company__nav__menu-item"><a href="about-company.html" class="vacancies__nav__menu-item-link">Кто мы</a></li>
-          <!-- <li class="company__nav__menu-item"><a href="about-managers.html" class="vacancies__nav__menu-item-link">Менеджеры</a></li> -->
           <li class="company__nav__menu-item"><a href="about-leaders.html" class="vacancies__nav__menu-item-link">Референсы</a></li>
           <li class="company__nav__menu-item"><a href="about-vacancies.html" class="vacancies__nav__menu-item-link active">Вакансии</a></li>
         </ul>
@@ -65,7 +64,6 @@
             </label>  
           </div>
         </div>
-
         <div class="vacancies__map">
           <svg width="1100" height="603" viewbox="0 0 1100 603" fill="none" xmlns="http://www.w3.org/2000/svg">
             <a class="severo__zapadniy-okrug" href="#our-managers">
@@ -321,17 +319,25 @@
 
       <div class="vacancies__vacancies-container" id="our-vacancies">
         <h1 class="vacancies__vacancies__title h1">Наши Вакансии</h1>
-        <div class="vacancies__vacancies__search-content">
-          <div class="vacancies__vacancies__search-item">
-            <p class="vacancies__vacancies__search-subtitle">Город</p>
-            <input placeholder="Введите город" type="text" id="city" class="vacancies__vacancies__search-input">
-          </div>
-          <div class="vacancies__vacancies__search-item">
-            <p class="vacancies__vacancies__search-subtitle">Должность</p>
-            <input id="position" placeholder="Ведите должность" type="text" class="vacancies__vacancies__search-input">
-          </div>
-          <div class="vacancies__vacancies__search-item">
-           <a href="#" class="vacancies__vacancies__search-button little__button">Поиск</a>
+        <div class="vacancies__search-box">
+          <div>
+            <select name="name" class="input">
+              <option value="город" selected="select">Выберите город</option>
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Казань">Казань</option>
+              <option value="Уфа">Уфа</option>
+              <option value="Брянск">Брянск</option>
+              <option value="Чехов">Чехов</option>
+            </select>
+            <select name="name" class="input">
+              <option value="Выберите должность" selected="select">Выберите должность</option>
+              <option value="Тестировщик">Тестировщик</option>
+              <option value="BIM-мастер">BIM-мастер</option>
+              <option value="Дизайнер">Дизайнер</option>
+              <option value="C++ Разработчик">C++ Разработчик</option>
+            </select>
+            <button class="little__button">Поиск</button>
           </div>
         </div>
 

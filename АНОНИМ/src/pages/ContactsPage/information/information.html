@@ -46,7 +46,6 @@
         <div class="information__maps">
           <div class="information__maps-cont">
             <div class="information__maps-item">
-              
               <svg width="1100" height="603" viewbox="0 0 1100 603" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <a class="severo__zapadniy-okrug" href="#our-managers">
                   <path d="M152.575 163.077L149.308 162.217L144.751 161.357L141.398 157.058L137.786 152.759L136.583 151.04H134.777L133.659 151.899L131.768 153.619L129.188 156.198H127.555L127.469 157.918L127.641 158.778H127.899L127.985 159.638H127.211L126.351 160.497L125.577 162.217L125.233 164.796L125.577 166.516L125.491 167.376L124.631 168.236L123.6 169.095L124.115 169.955L125.061 170.815L125.319 173.395L124.459 174.254L124.631 175.974L124.287 176.834H124.631H125.233H126.179L127.039 175.974H130.048L133.057 175.114L134.519 174.254H135.895L136.497 173.395L137.271 172.535L139.076 173.395L140.366 175.974H141.827L142.601 175.114L143.375 175.974L144.235 176.834L150.855 175.114L154.123 171.675L155.584 168.236L154.467 167.376L153.177 165.656L152.833 164.796L152.575 163.077V163.077Z" fill="#207812" stroke="none" stroke-width="0.5"/>
@@ -1853,17 +1852,25 @@
         <!-- Managers -->
         <div class="information__managers__container" id="our-managers">
           <h1 class="information__managers__title h1">Наши менеджеры</h1>
-          <div class="information__managers__search-content">
-            <div class="information__managers__search-item">
-              <p class="information__managers__search-subtitle">Должность</p>
-              <input placeholder="Ведите должность" type="text" class="information__managers__search-input">
-            </div>
-            <div class="information__managers__search-item">
-              <p class="information__managers__search-subtitle">Город</p>
-              <input placeholder="Введите город" type="text" class="information__managers__search-input">
-            </div>
-            <div class="information__managers__search-item">
-             <a href="#" class="information__managers__search-button little__button">Поиск</a>
+          <div class="information__search-box">
+            <div>
+              <select name="name" class="input">
+                <option value="город" selected="select">Выберите город</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Казань">Казань</option>
+                <option value="Уфа">Уфа</option>
+                <option value="Брянск">Брянск</option>
+                <option value="Чехов">Чехов</option>
+              </select>
+              <select name="name" class="input">
+                <option value="Выберите должность" selected="select">Выберите должность</option>
+                <option value="Тестировщик">Тестировщик</option>
+                <option value="BIM-мастер">BIM-мастер</option>
+                <option value="Дизайнер">Дизайнер</option>
+                <option value="C++ Разработчик">C++ Разработчик</option>
+              </select>
+              <button class="little__button">Поиск</button>
             </div>
           </div>
 
