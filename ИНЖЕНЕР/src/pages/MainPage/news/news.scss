@@ -28,8 +28,7 @@
   }
 
   &__slider__item {
-    padding: 2% 7%;
-    position: relative;
+    padding: 3% 0%;
 
     img {
       max-width: 100%;
@@ -49,40 +48,7 @@
     } 
   }
 
-  &__slider__info {
-    position: absolute;
-    left: 3%;
-    right: 3%;
-    bottom: 10%;
-    padding: 1% 5%; 
-
-    p {
-      color: color(dark);
-      background-color: #b6e9df;
-      padding: 15px;
-      line-height: 150%;
-      border-radius: 5px;
-
-      @include phoneScreen {
-        border-radius: 0 0 5px 5px;  
-        font-size: 14px;
-        line-height: 140%;
-      }
-    }
-
-    @include ipadScreen {
-      padding: 0;
-    }
-
-    @include phoneScreen {
-      position: sticky;
-    }
-  }
-
   //Навигации и пагинации
-  .swiper-pagination {
-    bottom: 0;
-  }
   .swiper-pagination .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
@@ -94,22 +60,7 @@
       height: 12px;
       width: 12px;
     }
-  }
-
-  .swiper-button-prev:after,
-  .swiper-button-next::after {
-    color: rgb(0, 0, 0);
-    font-size: 35px;
-    position: absolute;
-  }
-
-  @include phoneScreen {
-    .swiper-button-prev:after,
-    .swiper-button-next::after {
-      display: none;
-    }
-  }
-
+  } 
 
   &__container {
     display: flex;

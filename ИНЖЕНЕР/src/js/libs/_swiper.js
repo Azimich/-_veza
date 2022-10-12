@@ -16,7 +16,7 @@ export const initSwiper = () => {
 
   // Слайдер для страницы редактирование моей страницы
   const swiper2 = new Swiper(".changeproduction__swiper__container", {
-    modules: [Pagination, Autoplay],
+    modules: [Pagination, Autoplay, Navigation],
     loop: true,
     autoplay: true,
 
@@ -64,18 +64,16 @@ export const initSwiper = () => {
   });
 
   // Слайдер для страницы история завода
-  const swiper4 = new Swiper(".news__slider__container", {
-    modules: [Navigation, Pagination],
+  const swiper9 = new Swiper(".news__slider__container", {
+    modules: [Navigation, Pagination, Autoplay ],
     loop: true,
-    autoplay: {
-      delay: 5000,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
     },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
+  
     breakpoints: {
       300: {
         slidesPerView: 1,

@@ -16,6 +16,8 @@ import { initContacts } from './_contacts';
 import { initLeaders } from './_leaders';
 import { initNotification } from './_notification';
 import { initialPoints } from './_points';
+import { initChangeProduction } from './_changeProduction';
+import { initChangeTabssizes } from './_changeTabssizes';
 
 
 (function () {
@@ -41,6 +43,8 @@ import { initialPoints } from './_points';
     initContacts();
     initNotification();
     initialPoints();
+    initChangeProduction();
+    initChangeTabssizes();
 
   } catch (err) {
     console.log(err);

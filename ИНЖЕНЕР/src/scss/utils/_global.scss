@@ -88,6 +88,65 @@ button {
   cursor: pointer;
 }
 
+
+//Стили для иконок по редактированию/удаления
+.editing__icons {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;  
+  display: flex;
+  align-items: baseline;
+}
+
+.pen__icon,
+.removed {
+  background-color: color(white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 9px;
+  margin-left: 12px;
+  cursor: pointer; 
+  transition: all 0.3s;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    transition: all 0.3s;
+  }  
+}
+
+.pen__icon {
+
+  &:hover {
+    background-color: color(green);
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.removed {
+  position: absolute;
+  bottom: 8px;
+  right: 5px; 
+  background-color: color(white);
+  
+  &:hover {
+    background-color: color(green);
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.icon__border {
+  border: 1px solid color(green);
+}
+
 //стили для активного пункта меню
 .header__menu-link {
   &.active:after {

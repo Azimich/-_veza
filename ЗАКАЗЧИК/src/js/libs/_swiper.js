@@ -99,7 +99,7 @@ export const initSwiper = () => {
     },
   });
 
-  // Слайдер для страницы история завода
+
   const swiper5 = new Swiper(".news__slider__container", {
     modules: [Navigation, Pagination, Autoplay ],
     loop: true,

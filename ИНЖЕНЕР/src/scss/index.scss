@@ -147,6 +147,11 @@
 
 //Стили Страницы Моя продукция РЕДАКТИРОВАНИЕ
 @import '../pages/ChangemypoductPage/header/header';
-@import '../pages/ChangemypoductPage/changeproduct//changeproduct';
+@import '../pages/ChangemypoductPage/changeproduct/changeproduct';
 @import '../pages/ChangemypoductPage/footer/footer'; 
+
+//Стили Страницы Моя продукция РЕДАКТИРОВАНИЕ - Типоразмеров
+@import '../pages/CangeTypeSizePage/header/header';
+@import '../pages/CangeTypeSizePage/changeSize/changesize'; 
+@import '../pages/CangeTypeSizePage/footer/footer'; 
 

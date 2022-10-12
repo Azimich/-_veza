@@ -480,7 +480,7 @@
     }
   }
 
-  &__info-telegram{
+  &__info-telegram {
     padding: 20px 0 50px;
   }
 
@@ -504,11 +504,19 @@
     }
 
     .support__info__tg {
-
       input {
         margin-bottom: 12px; 
         background: color(white);
       } 
+    }
+
+    .support__info-buttons { 
+      display: flex;
+      align-items: center;
+
+      a {
+        margin-right: 20px;   
+      }
     }
   }
 
@@ -536,10 +544,6 @@
     .pen__icon  {
       margin: auto 0 auto auto;
     }
-  }
-
-  &__info-link {
-    height: 38px;
   }
 
 
