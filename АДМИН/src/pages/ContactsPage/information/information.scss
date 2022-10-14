@@ -1072,7 +1072,7 @@
 
     .last__way-bg {
       background: color(white);
-      padding: 20px 110px;
+      padding: 50px 130px;
       border-radius: 10px;
     }
 
@@ -1402,8 +1402,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    height: 10vw;
-    width: 10vw;
+    height: 100px;
+    width: 100px;
 
     @include phoneScreen {
       height: 40vw;

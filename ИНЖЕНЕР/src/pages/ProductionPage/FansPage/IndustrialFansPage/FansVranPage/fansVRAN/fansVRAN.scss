@@ -298,6 +298,8 @@
       }
     }
 
+
+
     @include ipadScreen {
       width: 100%;
       margin-bottom: 2%;
@@ -369,7 +371,7 @@
     }
 
     a {
-      width: 144px;
+      width: 135px;
 
       @include ipadScreen {
         width: 182px;  

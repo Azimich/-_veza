@@ -1250,6 +1250,7 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    transition: all 0.3s;
 
     &.last__item{
       background-color: transparent;  

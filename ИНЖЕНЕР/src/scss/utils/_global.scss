@@ -238,6 +238,83 @@ button {
   }
 }
 
+// Модальное окно для редакирования
+.popup__documentation-editing {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 28, 8, 0.8);
+  backdrop-filter: blur(3px);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: all 0.1s;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.popup__documentation-editing.open .popup__documentation-editing-body {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__documentation-editing-body {
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  right: 0;
+  width: 500px !important;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+  background: #fff;
+  overflow: hidden;
+
+  @include phoneScreen {
+    width: 90%;
+  }
+}
+
+.BIM-editing__close-popup {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: gray !important;
+  font-weight: 400;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup__documentation-editing-content {
+  width: 100%; 
+  padding: 15% 5%; 
+}
+
+.popup__documentation-editing-input {
+
+  input {
+    height: 42px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      padding: 10px 0 100px 10px;
+    }
+  }
+}
+
+.last__input {
+  padding: 15px 10px 100px 10px !important;
+  height: auto !important;
+}
+
 //Стили для футера
 .footer__navigation {
   li {
