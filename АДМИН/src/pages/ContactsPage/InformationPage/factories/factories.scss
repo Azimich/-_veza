@@ -18,7 +18,7 @@
 
   &__nav {
     margin: 0 auto 100px;
-    max-width: 400px;
+    max-width: 600px;
 
     @media (max-width: 650px) {
       margin-bottom: 60px;
@@ -53,8 +53,6 @@
 
     &.active {
       color: color(green);
-      font-weight: 500;
-
       @media (max-width: 650px) {
         color: color(white);
         background-color: color(green) !important;
@@ -106,7 +104,25 @@
     }
   }
 
+  &__contacts__added {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    width: 290px;
+    padding: 20px 10px;
+    button {
+      margin-top: 20px;
+      height: 36px;
+      width: 110px;
+    }
+  }
 
+  &__contacts-inputs {
+    input {
+      height: 32px;
+      margin-bottom: 12px;
+      background-color: color(white);
+    }
+  }
 
   &__contacts-title {
     font-size: 35px;
@@ -125,27 +141,20 @@
   }
 
   &__contacts-factories {
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    @media (max-width: 1350px) {
-      justify-content: center;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
   }
 
   &__contacts__factories-item {
-    width: 290px;
     background-color: color(white);
     box-shadow: 0 0 5px rgb(184, 184, 184);
     border-radius: 10px;
     overflow: hidden;
     padding: 15px;
     border-bottom: 3px solid transparent;
-    margin: 0 5px 30px 5px;
     transition: all 0.3s;
-
+    position: relative;
     @media (min-width: 1024px) {
       &:hover {
         box-shadow: 0 0 8px #33953A;
@@ -153,21 +162,23 @@
       }
     }
 
-    @media (max-width: 1350px) {
-      margin: 0 20px 30px 20px;
+    &:last-child {
+      background-color: #f3f3f3; 
     }
 
-    @media (max-width: 1111px) {
-      margin: 0 8px 30px 8px;
+    .pen__icon {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
     }
+  }
 
-    @include ipadScreen {
-      border-color: #33953A;
-    }
-
-    @media (max-width: 490px) {
-      margin: 0 0 30px 0;
-      width: 310px;
+  .popup__editing-input {
+    input {
+      &:last-child {
+        height: 42px;
+        padding: 10px;
+      }
     }
   }
 
@@ -187,22 +198,25 @@
     display: flex;
     justify-content: space-between;
     color: gray;
-    font-size: 15px;
+    font-size: 14px;
+    &:last-child {
+      margin-top: 10px; 
+    }
     
     span {
       color: color(dark);
-      font-size: 15px;
+      font-size: 14px;
     }
 
     &:nth-child(2) {
-      margin: 8px 0;
+      margin: 12px 0;
     }
   }
 
   &__contacts__factories-servces:last-child {
 
     span {
-      max-width: 152px;
+      max-width: 140px;
       line-height: 145%;
     }
 
@@ -279,7 +293,7 @@
   }
 
   &__our__factories-container {
-    margin: 120px 0 0 0;
+    margin: 80px 0 0 0;
   }
 
   &__our__factories-title {
@@ -299,26 +313,20 @@
   }
 
   &__our__factories-factories {
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    @media (max-width: 1350px) {
-      justify-content: center;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
   }
 
   &__our__factories__factories-item {
-    width: 290px;
     background-color: color(white);
     box-shadow: 0 0 5px rgb(184, 184, 184);
     border-radius: 10px;
     overflow: hidden;
     padding: 15px;
     border-bottom: 3px solid transparent;
-    margin: 0 5px 30px 5px;
-    transition: all 0.3s;
+    transition: all 0.3s; 
+    position: relative;
 
     @media (min-width: 1024px) {
       &:hover {
@@ -327,21 +335,14 @@
       }
     }
 
-    @media (max-width: 1350px) {
-      margin: 0 20px 30px 20px;
+    &:last-child {
+      background-color: #f3f3f3; 
     }
 
-    @media (max-width: 1111px) {
-      margin: 0 8px 30px 8px;
-    }
-
-    @include ipadScreen {
-      border-color: #33953A;
-    }
-
-    @media (max-width: 490px) {
-      margin: 0 0 30px 0;
-      width: 310px;
+    .pen__icon {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
     }
   }
 
@@ -361,22 +362,25 @@
     display: flex;
     justify-content: space-between;
     color: gray;
-    font-size: 15px;
+    font-size: 14px;
+    &:last-child {
+      margin-top: 10px; 
+    }
     
-    span {
+    span { 
       color: color(dark);
-      font-size: 15px;
+      font-size: 14px;
     }
 
     &:nth-child(2) {
-      margin: 8px 0;
+      margin: 12px 0;
     }
   }
 
   &__our__factories__factories-servces:last-child {
 
     span {
-      max-width: 152px;
+      max-width: 140px;
       line-height: 145%;
     }
 
