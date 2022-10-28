@@ -7,8 +7,7 @@
 
   &__nav {
     margin: 0 auto 100px;
-    max-width: 400px;
-
+    max-width: 600px;
     @media (max-width: 650px) {
       margin-bottom: 60px;
     }
@@ -27,7 +26,6 @@
   }
 
   &__nav__menu-item {
-
     @media (max-width: 650px) {
       width: 80%;
       margin: 0 auto 10px;
@@ -42,8 +40,6 @@
 
     &.active {
       color: color(green);
-
-      
       @media (max-width: 650px) {
         color: color(white);
         background-color: color(green) !important;
