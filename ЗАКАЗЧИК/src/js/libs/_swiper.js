@@ -1,5 +1,5 @@
 
-import Swiper, { Navigation, Pagination, EffectCards } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectCards, Autoplay } from 'swiper';
 
 export const initSwiper = () => {
 
@@ -13,7 +13,6 @@ export const initSwiper = () => {
     simulateTouch: true,
     loop:true,
   });
-
   
   // gallery slider
   const swiper2 = new Swiper ('.gallery__slider', {
@@ -40,10 +39,8 @@ export const initSwiper = () => {
     loop:true,
   });
 
-
   //swiper-popup
   const swiper3 = new Swiper(".vacancies__slider", {
-
     modules: [Navigation, Pagination, EffectCards],
     effect: 'cards',
     EffectCards: {
@@ -98,6 +95,25 @@ export const initSwiper = () => {
       1024: {
         slidesPerView: 6,
         spaceBetween: 5,
+      },
+    },
+  });
+
+
+  const swiper5 = new Swiper(".news__slider__container", {
+    modules: [Navigation, Pagination, Autoplay ],
+    loop: true,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+  
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
     },
   });

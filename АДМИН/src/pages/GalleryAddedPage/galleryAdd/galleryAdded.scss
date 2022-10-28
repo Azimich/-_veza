@@ -1,0 +1,63 @@
+.gallery__added  {
+  margin: 180px auto 130px;
+
+  @include phoneScreen {
+    margin: 130px auto 80px;
+  }
+  
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+  }
+  
+  &-item {
+    position: relative;
+
+    .removed {
+      position: absolute;
+      top: 10px;
+      right: 10px; 
+    }
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      background-color: #f3f3f3;
+    }
+
+    .last__way {
+      position: relative;
+      background-color: #009247;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      height: 10vw;
+      width: 10vw;
+  
+      @include phoneScreen {
+        height: 40vw;
+        width: 40vw;
+      }
+  
+      input {
+        display: none !important;
+        opacity: 0;
+      }
+  
+      label {
+        background-image: url('../assets/images/add_file.svg');
+        @include backgroundImage(cover);
+        border-radius: 10px; 
+        display: block;
+        width: 70%;
+        height: 70%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+  }
+  
+}

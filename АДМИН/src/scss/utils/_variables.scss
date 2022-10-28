@@ -16,9 +16,9 @@ $screenWidth: (
 
 
 @function screenWidth($key) {
-    @return map-get($map: $screenWidth, $key: $key);
+  @return map-get($map: $screenWidth, $key: $key);
 }
   
 @function color($key) {
-    @return map-get($map: $colors, $key: $key);
+  @return map-get($map: $colors, $key: $key);
 }

@@ -1,0 +1,90 @@
+.myproduction {
+  margin: 180px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 80px; 
+  }
+  
+  &__productions {
+
+    h1 {
+      margin-bottom: 4%;
+      text-align: center;
+      font-size: 45px;
+      text-transform: uppercase;
+
+      @include ipadScreen {
+        font-size: 30px;
+      }
+
+      @include phoneScreen {
+        font-size: 25px;
+      }
+    } 
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+    padding: 0 0 8px 0;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+
+    &:hover {
+      img {
+        transition: scale(1.2);
+      } 
+    }
+
+    img {
+      object-fit: cover;
+      transform: scale(1);
+      transition: all 0.3s;
+    }
+
+    &:last-child {
+      background-color: #f3f3f3;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item:hover img {
+    transform: scale(1.1);
+  } 
+
+  .last__way {
+    position: relative;
+    background-color: #009247;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    input {
+      display: none !important;
+      opacity: 0;
+    }
+
+    label {
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+      display: block;
+      width: 70%;
+      height: 70%;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+}
