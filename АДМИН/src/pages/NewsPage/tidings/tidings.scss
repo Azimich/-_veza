@@ -5,6 +5,13 @@
     margin: 130px auto 50px;
   }
 
+  label {
+    input {
+      display: none;
+      opacity: 0;
+    }
+  }
+
   &__add-box {
     display: flex;
     align-items: center;
@@ -27,6 +34,28 @@
     }
   }
 
+  //Стили для счетчика
+  &__counter__icon {
+    position: absolute;
+    display: flex;
+    top: 0;
+    align-items: center;
+    background: color(green);
+    color: color(white); 
+    padding: 10px 12px 10px 12px;
+    border-radius: 0 0 6px 0; 
+
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 5%; 
+
+      path {
+        fill: #fff;
+      }
+    } 
+  }
+
   &__title {
     margin-bottom: 80px;
     text-align: center;
@@ -45,6 +74,7 @@
     border-radius: 10px;
     transition: all 0.3s;
     margin-bottom: 50px;
+    position: relative;
 
     @media (min-width: 1024px) {
       &:hover {
@@ -62,6 +92,11 @@
         background-color: transparent;
       }
     }
+
+    .archive {
+      left: auto;
+      right: 10px; 
+    }  
   }
   
   &__item:hover &__item-title {
@@ -101,13 +136,14 @@
   }
 
   &__item:hover {
-
+    .archive,
     .pen__icon,  
     .removed {
+
       &:hover {
         background-color: rgb(255, 255, 255);
       }
-
+       
       path {
         fill: #212121;
       }
@@ -116,6 +152,7 @@
 
   &__item__second:hover { 
 
+    .archive,
     .pen__icon,  
     .removed {
       &:hover {
@@ -125,7 +162,7 @@
       path {
         fill: #212121;
       }
-    }
+    } 
   } 
 
   &__images-box {
@@ -252,6 +289,7 @@
   }
 
   &__item__second {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -353,9 +391,10 @@
 
   &__item-title__second {
     font-weight: 600;
-    font-size: 35px;
+    font-size: 33px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @media (max-width: 1280px) {
       font-size: 30px;
@@ -375,20 +414,14 @@
   }
 
   &__item-text__second {
-    margin: 10px 0 40px 0;
-    font-size: 18px;
+    font-size: 16px;
 
     span {
       font-weight: 600;
     }
 
-    .pen__icon {
-      margin: 8px auto auto 0;
-    }
-
     @media (max-width: 1280px) {
       margin: 10px 0 30px 0;
-      font-size: 16px; 
     }
 
     @include phoneScreen {
@@ -487,7 +520,7 @@
 
   &__item-horizontal {
     position: relative;
-    width: 410px;
+    width: 410px;                     
 
     &:nth-child(2) {
       margin: 0 10px;
@@ -499,6 +532,28 @@
 
     @include ipadScreen {
       margin-bottom: 30px;
+      width: auto;
+    }
+
+    .tidings__counter__icon {
+      right: 0;
+      top: auto;
+      left: auto;
+      z-index: 2;
+      border-radius:  0 5px 0 5px;
+    }
+
+    .archive {
+      bottom: -40px;
+      left: auto;
+      right: 0;
+    }
+
+    .horizontal__pen-icon {
+      position: absolute;
+      bottom: -40px;  
+      left: 0;
+      right: auto;
     }
   }
 

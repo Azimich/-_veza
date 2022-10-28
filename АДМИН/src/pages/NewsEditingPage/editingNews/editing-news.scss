@@ -4,6 +4,13 @@
   @include phoneScreen {
     margin: 130px auto 50px;
   } 
+
+  label {
+    input {
+      display: none;
+      opacity: 0;
+    }
+  }
   
   &__add-box {
     display: flex;
@@ -244,13 +251,15 @@
       transition: all 0.3s;
     }
 
-    &:hover {
-      span {
-        background-color: color(green);
-      }
-
-      path {
-        fill: #fff;
+    a {
+      &:hover {
+        span {
+          background-color: color(green);
+        }
+  
+        path {
+          fill: #fff;
+        }
       }
     }
   }
@@ -267,6 +276,7 @@
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 20px;
     padding: 20px 0 8px 0; 
+    margin: 50px 0 0 0;
 
     @include ipadScreen {
       margin-top: 30px;
@@ -291,8 +301,33 @@
       box-shadow: 0 0 10px #008628;
     }
 
+    &:last-child {
+      padding: 25% 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f3f3f3;
+      border-top-right-radius: 10px;
+
+      @include ipadScreen {
+        padding: 15% 0;
+      }
+    }
+
     img {
       object-fit: cover;
+    }
+
+    span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;  
+    }
+
+    .archive {
+      right: 10px;
+      bottom: 10px;
+      left: auto; 
     }
   }
 
@@ -338,5 +373,36 @@
   &__button {
     margin: 50px auto 0;
     cursor: pointer;
+  }
+
+  .last__way {
+    position: relative;
+    background-color: #009247;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+
+    input {
+      display: none !important;
+      opacity: 0;
+    }
+
+    label {
+      background-image: url('../assets/images/add_file.svg');
+      @include backgroundImage(cover);
+      border-radius: 10px; 
+      display: block;
+      width: 70%;
+      height: 70%;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  .second-input {
+    padding: 15px 0 100px 10px; 
   }
 }

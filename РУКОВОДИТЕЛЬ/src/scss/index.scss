@@ -1,0 +1,100 @@
+
+
+//Глобальные css & mixins
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../../node_modules/@fancyapps/ui/dist/fancybox.css';
+@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/video.js/src/css/video-js.scss';
+@import '../../node_modules/video.js/dist/video-js.min.css';
+@import './utils/variables';
+@import './utils/_mixins';
+@import './utils/_global';
+
+//Стили главной страницы сайта
+@import '../pages/MainPage/header/header';
+@import '../pages/MainPage/banner/banner';
+@import '../pages/MainPage/about/about';
+@import '../pages/MainPage/news/news';
+@import '../pages/MainPage/gallery/gallery';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../pages/MainPage/footer/footer';
+ 
+//Стили страницы РЕШЕНИЯ
+@import '../pages/DecisionsPage/industry/industry';
+
+//Стили страницы ОТРАСЛИ
+@import '../pages/DecisionsPage/IndustryPage/objects/objects';
+@import '../pages/DecisionsPage/IndustryPage/slider/slider';
+
+//Стили страницы ПРОДУКЦИЯ
+@import '../pages/ProductionPage/equipment/equipment';
+
+//Стили страницы Вентиляторы
+@import '../pages/ProductionPage/FansPage/fans/fans';
+
+//Стили страницы ОБЩЕПРОМЫШЛЕННЫЕ Вентиляторы
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/industrialfans/industrialfans';
+
+//Стили страницы Вентиляторы ВРАН
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/fansVRAN/fansVRAN';
+
+//Стили страницы Вентиляторы и Типаразмеры
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/tabssizes/tabssizes';
+
+//Стили страницы Новости
+@import '../pages/NewsPage/tidings/tidings';
+
+//Стили страницы Активная Новости
+@import '../pages/NewsPage/activeNewsPage/activenews/activenews';
+
+//Стили страницы О компании
+@import '../pages/AboutPage/company/company';
+
+//Стили страницы История;
+@import '../pages/AboutPage/HistoryPage/history/history';
+
+//Стили страницы Наши Лидеры
+@import '../pages/AboutPage/LeadersPage/leaders/leaders';
+
+//Стили страницы Вакансии
+@import '../pages/AboutPage/VacanciesPage/vacancies/vacancies';
+
+//Стили страницы Ресурсы
+@import '../pages/CertificatesPage/certificates/certificates';
+
+//Стили страницы Сертификаты
+@import '../pages/ResourcesPage/theresources/resources';
+
+//Стили страницы Контакты
+@import '../pages/ContactsPage/information/information';
+
+//Стили страницы Техподдержка
+@import '../pages/ContactsPage/SupportPage/support/support';
+
+//Стили страницы Уведомления
+@import '../pages/NotificationPage/notifications/notifications';
+
+//Стили страницы Профиль
+@import '../pages/ProfilePage/profile/profile';
+
+//Стили страницы Обучения
+@import '../pages/EducationPage/education/education';
+
+//Стили страницы Тестирование
+@import '../pages/TestPage/test/test';
+
+//Стили страницы Документации
+@import '../pages/DocumentationPage/documentation/documentation';
+
+//Стили страницы Баллы
+@import '../pages/PointsPage/points/points'; 
+
+//Стили Страницы Расчёты
+@import '../pages/CalculationsPage/calculations/calculations';
+
+//Стили Страницы Перслнал
+@import '../pages/StaffPage/staff/staff';
+ 
+//Стили Страницы Обучение -2
+@import '../pages/PointsSecondPage/pointsecond/pointsecond';
+ 

@@ -40,6 +40,7 @@ button {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 textarea{
@@ -108,6 +109,241 @@ section {
 }
 
 
+//Стили для тех-поддержки
+.header__nav {
+  padding: 30px 0 50px 0 !important;
+
+  @include ipadScreen {
+    padding: 25px 0 30px 0 !important; 
+  }
+}
+
+.header__location {
+  top: 39px;
+
+  @include phoneScreen {
+    top: 30px; 
+  }
+}
+
+.header__icon__box, 
+.mobile__search-box {
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .header__menu {
+    padding: 90px 0 900px 0 !important;
+  }
+}
+
+.header__menu-link {
+  font-size: 14px !important; 
+
+  &::after {
+    height: 1.5px !important;
+  }
+
+  &:hover:after {
+    height: 1.5px !important;
+  }
+} 
+
+.support__phone {
+  position: absolute;
+  top: 33px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  left: -15px;
+  width: 170px;
+  color: color(green);
+
+  svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  @include ipadScreen {
+    font-size: 16px;
+    top: 45px;
+
+    svg {
+      width: 24px;
+      height: 24px; 
+    }
+  }
+}
+
+ // Модальное окно для ссылок
+ .popup__editing {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 28, 8, 0.8);
+  backdrop-filter: blur(3px);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0;
+  overflow-y: hidden; 
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: all 0.1s;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.popup__editing.open .popup__editing-body {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__editing-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  width: 500px !important;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+  background: #fff;
+  overflow: hidden;
+
+  @include phoneScreen {
+    width: 90%;
+  } 
+} 
+ 
+.editing__close-popup {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: gray !important;
+  font-weight: 400;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup__editing-content {
+  padding: 15% 5%; 
+  width: 100%;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 500;
+    color: color(dark);
+    margin-bottom: 3%; 
+    text-transform: uppercase;
+  }
+}
+
+.popup__editing-input {
+
+  input {
+    height: 42px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      padding: 10px 0 100px 10px;
+    }
+  }
+
+  button {
+    margin-left: 2%;
+  }
+}
+
+.last__input {
+  padding: 15px 10px 100px 10px !important;
+  height: auto !important;
+}
+
+// Модальное окно для ссылок
+.popup__social {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 28, 8, 0.8);
+  backdrop-filter: blur(3px);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: all 0.1s;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.popup__social.open .popup__social-body {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__social-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  width: 1000px !important;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+  background: #fff;
+  overflow: hidden;
+
+  @include phoneScreen {
+    width: 90%;
+  }
+}
+  
+.social__close-popup {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: gray !important;
+  font-weight: 400;
+  font-size: 30px;
+  cursor: pointer;
+}
+  
+.popup__social-content {
+  padding: 10% 5%;
+  width: 100%;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 500;
+    color: color(dark);
+    margin-bottom: 3%; 
+  }
+}
+
+.popup__social-input {
+  display: flex;
+  align-items: center;
+
+  input {
+    height: 42px;
+  }
+
+  button {
+    margin-left: 2%;
+  }
+}
+
 //Стили для иконки архивировать
 .archive {
   position: absolute;
@@ -159,7 +395,7 @@ section {
   justify-content: center;
   width: 35px;
   height: 35px;
-  padding: 10px;
+  padding: 9px;
   margin-left: 12px;
   cursor: pointer; 
   transition: all 0.3s;

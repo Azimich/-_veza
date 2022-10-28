@@ -1,19 +1,16 @@
 
-import Swiper, { Navigation, Pagination, EffectCards } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectCards, Autoplay } from 'swiper';
 
 export const initSwiper = () => {
 
   // banner slider
-  let swiper1 = new Swiper ('.banner__slider', {
-    modules: [Navigation, Pagination],
+  const swiper1 = new Swiper ('.banner__slider', {
+    modules: [Navigation, Pagination, Autoplay],
     grabCursor: true,
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: true,
     simulateTouch: true,
     loop:true,
   });
-
   
   // gallery slider
   const swiper2 = new Swiper ('.gallery__slider', {
@@ -31,7 +28,6 @@ export const initSwiper = () => {
 
     pagination: {
       el: '.swiper-pagination',
-
       clickable: true,
       dynamicBullets: true,
     },
@@ -40,11 +36,9 @@ export const initSwiper = () => {
     loop:true,
   });
 
-
   //swiper-popup
   const swiper3 = new Swiper(".vacancies__slider", {
-
-    modules: [Navigation, Pagination, EffectCards],
+    modules: [Navigation, Pagination, EffectCards, Autoplay],
     effect: 'cards',
     EffectCards: {
       rotate: true,
@@ -69,13 +63,11 @@ export const initSwiper = () => {
   });
 
   const swiper4 = new Swiper(".mySwiper", {
-    modules: [Navigation, Pagination, EffectCards],
+    modules: [Navigation, Pagination, EffectCards, Autoplay],
     slidesPerView: 5,
     spaceBetween: 5,
     loop: true,
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: true,
 
     navigation: {
       nextEl: '.swiper-button-next',
@@ -98,6 +90,26 @@ export const initSwiper = () => {
       1024: {
         slidesPerView: 6,
         spaceBetween: 5,
+      },
+    },
+  });
+
+  // Слайдер для страницы история завода
+  const swiper5 = new Swiper(".news__slider__container", {
+    modules: [Navigation, Pagination, Autoplay],
+    loop: true,
+    autoplay: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+  
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
     },
   });

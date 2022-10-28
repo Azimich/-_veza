@@ -3,8 +3,8 @@
 }
 
 @mixin backgroundImage($bgSize: 100% 100%) {
-    background-repeat: no-repeat;
-    background-size: $bgSize;
+  background-repeat: no-repeat;
+  background-size: $bgSize;
 }
 
 @mixin pcScreen {

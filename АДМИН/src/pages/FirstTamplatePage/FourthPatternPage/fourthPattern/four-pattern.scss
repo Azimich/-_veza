@@ -5,9 +5,25 @@
     margin: 130px auto 50px;
   }
 
+  //нижние селекты
+  &__second-select, 
+  &__third-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #AEDEA8;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+
+  &__second-select {
+    margin-bottom: 3%;
+  }
+
   //Стили для селекта
   .tamplates__container {
-    padding: 40px 0 20px 0;
+    padding: 40px 0 12px 0;
   }
 
   .tamplates__select-box {
